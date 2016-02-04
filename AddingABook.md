@@ -1,7 +1,5 @@
 ### Adding A Book
 
-### Login
-
 | Use case | Adding a book |
 |---|---|
 | Primary Actor | Moderator, Publisher |
