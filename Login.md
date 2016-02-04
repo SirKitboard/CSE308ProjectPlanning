@@ -3,11 +3,11 @@
 | Use case | Login |
 |---|---|
 | Primary Actor | Guest |
-| Goal in context: | Authorize the user and give them the access their account level |
+| Goal in context: | Authorize the actor and give them the access their account level |
 | Preconditions: | Must not be already logged in |
-| Trigger: | A guest clicks on the login button |
-| Scenario: | <ol><li>A guest opens the website and clicks on login</li><li>A guest attempts to checkout a book</li><li>A guest attempts to write a review</li></ol>|
-| Exceptions: | <ol><li> When the guest enters no credentials </li><li> When the guest enters invalid credentials </li></ol> |
+| Trigger: | The actor clicks on the login button |
+| Scenario: | <ol><li>The Actor opens the website and clicks on login</li><li>A actor attempts to checkout a book</li><li>A actor attempts to write a review</li></ol>|
+| Exceptions: | <ol><li> When the actor enters no credentials </li><li> When the actor enters invalid credentials </li></ol> |
 | Priority: | Essential, must be implemented |
 | When available | First increment |
 | Frequency of use | Multiple times a day |
