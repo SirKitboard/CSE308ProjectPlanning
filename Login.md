@@ -14,4 +14,4 @@
 | Channel to actor | Via web interface |
 | Secondary actors | None |
 | Channels to secondary actors | N/A |
-| Open issues | <ol> <li>Where on the web interface will the search fields and buttons be displayed?</li><li>When use is redirected to login page, how to redirect him back to original page from where the originally started</li></ol> |
+| Open issues | <ol> <li>Where on the web interface will the search fields and buttons be displayed?</li><li>When actor is redirected to login page, how to redirect him back to original page from where the originally started</li></ol> |
