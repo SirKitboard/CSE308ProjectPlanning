@@ -5,3 +5,4 @@
 3. Writing a review
 4. Adding a book
 5. Login
+6. Writing a review (Curator)
