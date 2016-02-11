@@ -8,7 +8,7 @@
 | Exceptions                    | 1. All copies of the book are checked out: The user is given a choice to be put on a waitlist for the book.<br> 2. Actor not logged in: The actor is sent to a login screen before being sent to the appropriate page for checking out the book.|
 | Priority                      | Essential, must be implemented. |
 | When Available                | Second increment. |
-| Frequency of Use              | Used on a daily basis (hopefully). |
+| Frequency of Use              | Used on a daily basis. |
 | Channel to Actor              | Via web browser |
 | Secondary Actors              | Publisher, Server |
 | Channels to Secondary  Actors | Server: network and local interface<br> Publisher: web browser|
