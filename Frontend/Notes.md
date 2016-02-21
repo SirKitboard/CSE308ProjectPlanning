@@ -51,6 +51,7 @@
     * Quick add on hover
     * Quick checkout icon in details
 
+
 ## Book details page
 
 * Looks exactly like expanded details
@@ -75,5 +76,3 @@
         * Review
         * Purchase
     * Each item has borrowed on and due on/returned on
-
-## Edit Profile
