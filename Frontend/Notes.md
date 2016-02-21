@@ -87,12 +87,14 @@
 * All details as normal profile
 * Star next to name/propic
 * Booklists
+
 <!-- * Number of followers -->
 
 ## Publisher page
 
 * Shows publisher banner
 * Send publisher email
+
 
 ## FAQ
 
