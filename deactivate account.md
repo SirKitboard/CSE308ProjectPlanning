@@ -12,4 +12,4 @@
 | Channel to Actor              | Via web browser |
 | Secondary Actors              | Server |
 | Channels to Secondary  Actors | Server: network and local interface<br> |
-| Open Issues                   | |
+| Open Issues                   | 1. User has books currently checked out|
