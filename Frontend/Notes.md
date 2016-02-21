@@ -76,3 +76,24 @@
         * Review
         * Purchase
     * Each item has borrowed on and due on/returned on
+
+## Profile
+
+* When owner views it, show everything, otherwise restricted access
+* Shows books reviewed and rated
+
+## Curator Profile
+
+* All details as normal profile
+* Star next to name/propic
+* Booklists
+<!-- * Number of followers -->
+
+## Publisher page
+
+* Shows publisher banner
+* Send publisher email
+
+## FAQ
+
+* Fairly standard, refer to both our 305 projects
