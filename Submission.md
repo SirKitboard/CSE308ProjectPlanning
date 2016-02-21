@@ -13,6 +13,7 @@ Listed in roster as Team Aspen
 5. **Moderator:** A moderator can add and remove books, delete reviews that are inappropriate and ban users who are writing spam or inappropriate reviews.
 6. **Admin:** An Admin change every aspect of the website, therefore they have full backend access. They have all the access a Moderator has, along with the rights to approve curators, remove users, create and remove moderators, publishers and curators.
 
+<div class="page-break"></div>
 
 ### Use Cases
 
@@ -85,6 +86,8 @@ Listed in roster as Team Aspen
 1. **Add and remove rows from the database -** Add or remove information from the database such as a book, author, author name, etc.
 1. **Update database structure -** Admins can modify the database structure and migrate the website onto the new structure.
 
+<div class="page-break"></div>
+
 ### Use Case Details
 
 #### Add A Book
@@ -96,7 +99,7 @@ Listed in roster as Team Aspen
 | Preconditions: | Must be logged in as a Moderator, Publisher or an Admin |
 | Trigger: | The actor clicks on the "Add book" button |
 | Scenario: | <ol><li>The Actor opens the website and clicks on add a book button</li></ol>|
-| Exceptions: | <ol><li> The book already exists </li><li> There is no stock for the book </li><li>The upload for book cover or other information fails</li></ol> |
+| Exceptions: | <ol><li> The book already exists </li><li>The cover size is too big</li><<li>The upload for book cover or other information fails</li></ol> |
 | Priority: | Essential, must be implemented |
 | When available | First increment |
 | Frequency of use | Upto the actors |
@@ -133,7 +136,7 @@ Listed in roster as Team Aspen
 | Preconditions                 | The actor must be logged in and be a currently active user. Actor must navigate to the account settings page.|
 | Triggers                      | The actor goes to his account settings and chooses an option to deactivate his account.|
 | Scenario                      | 1. Actor navigates to the account settings page. <br>2. Actor clicks the deactivate account button. <br> 3. Popup comes asking the user to confirm the choice. Password input is required to validate. <br> 4. If user wishes to continue he/she clicks the confirm button <br> 5. Actor is logged out of account and taken to the home page.|
-| Exceptions                    | <ol><li>User inputs incorrect password in confirmation popup.|
+| Exceptions                    | <ol><li>User inputs incorrect password in confirmation popup.</li><li>Account is already deactivated</li></ol>|
 | Priority                      | Important, but not necessarily implemented immediately |
 | When Available                | Second increment. |
 | Frequency of Use              | Occasionally |
@@ -151,7 +154,7 @@ Listed in roster as Team Aspen
 | Preconditions: | Must not be already logged in |
 | Trigger: | The actor clicks on the login button |
 | Scenario: | <ol><li>The Actor opens the website and clicks on login</li><li>A actor attempts to checkout a book</li><li>A actor attempts to write a review</li></ol>|
-| Exceptions: | <ol><li> When the actor enters no credentials </li><li> When the actor enters invalid credentials </li></ol> |
+| Exceptions: | <ol><li> When the actor enters no credentials </li><li> When the actor enters invalid credentials </li><li>The accout is deactivated</li></ol> |
 | Priority: | Essential, must be implemented |
 | When available | First increment |
 | Frequency of use | Multiple times a day |
