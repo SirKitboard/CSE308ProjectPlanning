@@ -22,6 +22,7 @@
     "jquery": "^2.2.1",
     "react": "^0.14.7",
     "requirejs": "latest",
-    "materialize": "latest"
+    "materialize": "latest",
+    "hammerjs":"latest"
   }
 }
