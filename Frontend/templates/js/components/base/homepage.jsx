@@ -1,9 +1,10 @@
 define([
-    "jquery",
-    "underscore",
-    "backbone",
-    "react"
-], function($, _, Backbone, React) {
+    'jquery',
+    'underscore',
+    'backbone',
+    'react',
+    'jsx!components/navigation/navbar'
+], function($, _, Backbone, React, NavigationBar) {
     return React.createClass({
         getInitialState : function() {
             return {
@@ -13,6 +14,7 @@ define([
         render: function() {
             return(
                 <div>
+                    <NavigationBar/>
                     <h1>WORKS!!</h1>
                 </div>
             )
