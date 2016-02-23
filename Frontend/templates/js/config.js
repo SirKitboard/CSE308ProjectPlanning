@@ -8,6 +8,7 @@ require.config({
 	         "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.min",
 	              "flux": "bower_components/flux/dist/Flux",
 	             "react": "bower_components/react/react-with-addons",
+			 "react-dom": "bower_components/react/react-dom",
 	    "JSXTransformer": "bower_components/jsx-requirejs-plugin/js/JSXTransformer",
 	               "jsx": "bower_components/jsx-requirejs-plugin/js/jsx",
 	          "backbone": "bower_components/backbone/backbone",
