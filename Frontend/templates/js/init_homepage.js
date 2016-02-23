@@ -1,6 +1,5 @@
 require([
     "react",
-    // "react-dom",
     "jsx!components/base/homepage"
 ], function(React, HomepageComponent){
     var app = React.createElement(HomepageComponent, {key:"a"})
