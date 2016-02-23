@@ -20,6 +20,8 @@
     "flux": "^2.1.1",
     "jsx-requirejs-plugin": "^0.6.2",
     "jquery": "^2.2.1",
-    "react": "^0.14.7"
+    "react": "^0.14.7",
+    "requirejs": "latest",
+    "materialize": "latest"
   }
 }
