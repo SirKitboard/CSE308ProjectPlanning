@@ -14,8 +14,7 @@ require.config({
 	        "underscore": "bower_components/underscore/underscore",
 	        	  "text": "bower_components/requirejs-text/text",
 	        	"events": "bower_components/eventEmitter/EventEmitter",
-	           "snapsvg": "bower_components/snap.svg/dist/snap.svg",
-	               "api": "bower_components/buncee-enterprise-api-js-client/dist/api.min"
+	           "snapsvg": "bower_components/snap.svg/dist/snap.svg"
  	},
  	jsx: {
 		fileExtension: ".jsx"
