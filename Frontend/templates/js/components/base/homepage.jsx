@@ -1,10 +1,11 @@
 define([
     'jquery',
+    'materialize',
     'underscore',
     'backbone',
     'react',
     'jsx!components/navigation/navbar'
-], function($, _, Backbone, React, NavigationBar) {
+], function($, Materialize, _, Backbone, React, NavigationBar) {
     return React.createClass({
         getInitialState : function() {
             return {

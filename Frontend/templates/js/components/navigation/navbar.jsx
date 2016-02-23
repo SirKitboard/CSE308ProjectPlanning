@@ -1,18 +1,17 @@
 define([
-    "jquery",
-
     "underscore",
     "react",
     "backbone"
-], function($, _, React, backbone) {
+], function(_, React, backbone) {
     return React.createClass({
         getInitialState: function(){
+            // debugger;
             return {
                 'loggedIn': true
             }
         },
         componentDidMount : function() {
-            $(".dropdown-button").dropdown();
+            // $(".dropdown-button").dropdown();
             $(".button-collapse").sideNav();
         },
         componentDidUpdate : function() {
@@ -45,9 +44,9 @@ define([
                     <nav>
                     <div className="white blue-grey-text text-darken-1 nav-wrapper">
                         <a href="#" className="blue-grey-text text-darken-1 brand-logo">Logo</a>
-                        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+                        <a href="#" data-activates="mobile-demo" className="blue-grey-text text-darken-1 button-collapse"><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            {!this.state.loggedIn ? <li><a href="#">Login</a></li> : <li>Welcome <a href="#">Name</a><li><a className="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i className="material-icons right">arrow_drop_down</i></a></li></li>}
+                            {!this.state.loggedIn ? <li><a href="#">Login</a></li> : <li> <a className="blue-grey-text text-darken-1 dropdown-button" href="#!" data-activates="dropdown1"> Welcome Name<i className="material-icons right">arrow_drop_down</i></a></li>}
                         </ul>
                         {mobileItems}
                     </div>
