@@ -1,1 +1,20 @@
-// @import('../js/bower_components/materialize/dist/css/materialize.min.css')
+.nav-search {
+    width: 750%;
+    margin-left: 15%;
+    border-radius: 3px;
+    // @include media(min-width: 768px) {
+    //
+    // }
+
+    div {
+        i.active {
+            color:#000 !important;
+        }
+
+        label.active {
+            i {
+                color:#000 !important
+            }
+        }
+    }
+}

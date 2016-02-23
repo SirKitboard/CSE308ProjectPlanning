@@ -11,7 +11,7 @@ define([
             }
         },
         componentDidMount : function() {
-            // $(".dropdown-button").dropdown();
+            $(".dropdown-button").dropdown();
             $(".button-collapse").sideNav();
         },
         componentDidUpdate : function() {
@@ -43,7 +43,14 @@ define([
                     {navItems}
                     <nav>
                     <div className="white blue-grey-text text-darken-1 nav-wrapper">
-                        <a href="#" className="blue-grey-text text-darken-1 brand-logo">Logo</a>
+                        <a href="#" className="left blue-grey-text text-darken-1 brand-logo hide-on-med-and-down">Logo</a>
+                        <form className="nav-search">
+                            <div className="input-field">
+                                <input id="search" type="search" required/>
+                                <label htmltFor="search"><i className="grey-text material-icons">search</i></label>
+                                <i className="grey-text material-icons">close</i>
+                            </div>
+                        </form>
                         <a href="#" data-activates="mobile-demo" className="blue-grey-text text-darken-1 button-collapse"><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             {!this.state.loggedIn ? <li><a href="#">Login</a></li> : <li> <a className="blue-grey-text text-darken-1 dropdown-button" href="#!" data-activates="dropdown1"> Welcome Name<i className="material-icons right">arrow_drop_down</i></a></li>}

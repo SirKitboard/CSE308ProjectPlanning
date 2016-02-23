@@ -1,3 +1,10 @@
-
+.nav-search {
+  width: 750%;
+  margin-left: 15%;
+  border-radius: 3px; }
+  .nav-search div i.active {
+    color: #000 !important; }
+  .nav-search div label.active i {
+    color: #000 !important; }
 
 /*# sourceMappingURL=homepage.css.map */
