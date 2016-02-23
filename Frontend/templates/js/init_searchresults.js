@@ -1,10 +1,10 @@
 require([
     "react",
-    // "react-dom",
+    "react-dom",
     "jsx!components/base/searchresults"
-], function(React, SearchResultComponent){
+], function(React, ReactDOM, SearchResultComponent){
     var app = React.createElement(SearchResultComponent, {key:"a"})
-    React.render(app, document.getElementById('content'));
+    ReactDOM.render(app, document.getElementById('content'));
 }, function(error){
     console.log(error)
     debugger;

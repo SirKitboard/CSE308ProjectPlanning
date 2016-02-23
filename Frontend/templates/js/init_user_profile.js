@@ -1,9 +1,10 @@
 require([
 	'react',
+	'react-dom',
 	'jsx!components/base/user_profile'
-],function(React,UserProfileComponent){
+],function(React, ReactDOM, UserProfileComponent){
 	var app  = React.createElement(UserProfileComponent, {key: 'a'})
-	React.render(app, document.getElementById('content'));
+	ReactDOM.render(app, document.getElementById('content'));
 },function(error){
 	console.log(error)
 	debugger;
