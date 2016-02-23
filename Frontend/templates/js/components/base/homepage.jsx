@@ -7,7 +7,7 @@ define([
     return React.createClass({
         getInitialState : function() {
             return {
-                'something' : True
+                'something' : true
             }
         },
         render: function() {
