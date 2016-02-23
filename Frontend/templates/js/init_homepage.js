@@ -3,7 +3,7 @@ require([
     'react-dom',
     'jsx!components/base/homepage'
 ], function(React, ReactDOM, HomepageComponent){
-    var app = React.createElement(HomepageComponent, {key:'a'})
+    var app = React.createElement(HomepageComponent)
     ReactDOM.render(app, document.getElementById('content'));
 }, function(error){
     console.log(error)
