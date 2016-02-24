@@ -1,1 +1,9 @@
-@import "navbar.scss"
+@import "navbar.scss";
+
+.tab-row {
+    margin-top: 6px;
+}
+
+.row .col.s12 {
+    width: 101%;
+}
