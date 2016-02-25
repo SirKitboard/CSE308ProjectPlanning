@@ -104,14 +104,14 @@ define([
                 )
             }
             return(
-                <div>
+                <div className="nav-wrapper-outer">
                     {navItems}
                     <nav>
                     <div className="white blue-grey-text text-darken-1 nav-wrapper">
                         <a href="#" className="left blue-grey-text text-darken-1 brand-logo hide-on-med-and-down">Logo</a>
                         <a href="#" data-activates="mobile-demo" className="blue-grey-text text-darken-1 button-collapse"><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            {!this.state.loggedIn ? <li><a onClick={this.toggleLogin}>Login</a></li> : <li> <a className="blue-grey-text text-darken-1 dropdown-button" href="#!" data-activates="dropdown1"> Welcome Name<i className="material-icons right">arrow_drop_down</i></a></li>}
+                            {!this.state.loggedIn ? <li><a className="blue-grey-text text-darken-1" onClick={this.toggleLogin}>Login</a></li> : <li> <a className="blue-grey-text text-darken-1 dropdown-button" href="#!" data-activates="dropdown1"> Welcome Name<i className="material-icons right">arrow_drop_down</i></a></li>}
                         </ul>
                         <form onFocus={this.showDetails} onBlur={this.hideDetails} className="nav-search">
                             <div className="input-field">
