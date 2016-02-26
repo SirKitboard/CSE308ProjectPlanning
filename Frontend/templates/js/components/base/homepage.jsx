@@ -12,11 +12,14 @@ define([
             }
         },
         render: function() {
+            var loginSection;
+            var popularSection;
+            var newReleasesSection;
+            var curatedSection;
+            // var
             return(
                 <div>
                     <NavigationBar/>
-                    <h1>WORKS!!</h1>
-                    <a href="/bookprofile.html">Book Profile</a>
                 </div>
             )
         }
