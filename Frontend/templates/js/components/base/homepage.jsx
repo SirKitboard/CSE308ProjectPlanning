@@ -16,6 +16,7 @@ define([
                 <div>
                     <NavigationBar/>
                     <h1>WORKS!!</h1>
+                    <a href="/bookprofile.html">Book Profile</a>
                 </div>
             )
         }
