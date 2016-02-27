@@ -3,6 +3,13 @@
     top:0px;
     left:0px;
     width:100%;
+    .padNav & {
+        position:relative;
+    }
+
+    .brand-logo {
+        margin-left: 10px;
+    }
     @media screen and (max-width: 992px) {
         position:relative;
         // margin-left: 10%
