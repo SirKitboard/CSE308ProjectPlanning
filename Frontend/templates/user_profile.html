@@ -1,18 +1,20 @@
 <html>
-<head>
-    <!-- <link rel="stylesheet" href="css/homepage.css" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div id='content' class="padNav">
-    </div>
+	<head>
+	    <!-- <link rel="stylesheet" href="css/homepage.css" /> -->
+	    <link rel="stylesheet" href="js/bower_components/materialize/dist/css/materialize.css" />
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link rel="stylesheet" href="css/user_profile.css" />
+	</head>
+	<body>
+	    <div id='content'>
+	    </div>
 
-    <script src="js/bower_components/requirejs/require.js"></script>
-    <script type="text/javascript">
-        require(['js/config'], function () {
-          require(['init_user_profile']);
-        });
-	</script>
+	    <script src="js/bower_components/requirejs/require.js"></script>
+	    <script type="text/javascript">
+	        require(['js/config'], function () {
+	          require(['init_user_profile']);
+	        });
+		</script>
 
-</body>
+	</body>
 </html>
