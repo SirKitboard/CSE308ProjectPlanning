@@ -4,7 +4,7 @@ html, body {
 }
 
 .nav-wrapper-outer {
-    z-index: 999;
+    z-index: 9;
     position:fixed;
     top:0px;
     left:0px;
@@ -58,5 +58,57 @@ html, body {
                 overflow-x: hidden;
             }
         }
+
+        .shopping-cart-icon {
+            transition: background-color .3s;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(0,0,0, 0.1)
+            }
+        }
     }
+}
+
+#cart {
+    z-index: 10;
+    background: white;
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:-450px;
+    width:450px;
+    max-width: 90%;
+    .books {
+        height:85%;
+        padding:10px;
+        .cart-book {
+            border-bottom: 1px rgba(0,0,0,0.2) solid;
+        }
+        .cover {
+            height: 75px;
+            width:75px;
+        }
+    }
+
+    .actions {
+        height: 10%;
+        margin: auto;
+        text-align: center;
+        .btn {
+            width: 130px;
+            margin:10px
+        }
+    }
+}
+
+#dark-cover {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0;
 }

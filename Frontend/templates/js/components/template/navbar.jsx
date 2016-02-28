@@ -4,7 +4,9 @@ define([
     "react",
     "backbone",
     'materialize',
-], function($, _, React, backbone, Materialize) {
+    'jsx!components/template/shoppingcart',
+    'react-dom'
+], function($, _, React, backbone, Materialize, ShoppingCartComponent, ReactDOM) {
     return React.createClass({
         getInitialState: function(){
             // debugger;
@@ -12,8 +14,16 @@ define([
             if(window.location.hash == '#loggedIn') {
                 loggedIn = true
             }
+            var book = {
+                title: null,
+                description: null,
+                author: null
+            }
+            books = [book, book, book, book]
             return {
-                'loggedIn': loggedIn
+                'loggedIn': loggedIn,
+                'books': books,
+                cartOpen: false
             }
         },
         componentDidMount : function() {
@@ -35,6 +45,32 @@ define([
         },
         hideDetails : function() {
             $("#searchDetails").css('display', 'none')
+        },
+        toggleCart : function() {
+            if(this.state.cartOpen) {
+                $("#cart").animate({
+                    right:"-450px"
+                }, 500);
+                $("#dark-cover").animate({
+                    opacity: '0'
+                }, 500, function() {
+                    $("#dark-cover").css('display','none')
+                });
+                this.setState({
+                    cartOpen:false
+                })
+            } else {
+                $("#cart").animate({
+                    right:"0px"
+                }, 500)
+                $("#dark-cover").css('display','block')
+                $("#dark-cover").animate({
+                    opacity: '0.7'
+                }, 500);
+                this.setState({
+                    cartOpen:true
+                })
+            }
         },
         render: function() {
             var searchDetails = (
@@ -85,6 +121,8 @@ define([
                 </div>
             )
             if(this.state.loggedIn) {
+                var shoppingCart = <ShoppingCartComponent onClose={this.toggleCart} books={this.state.books}/>
+                ReactDOM.render(shoppingCart, document.getElementById('cart'))
                 var navItems = (<ul id="dropdown1" className="dropdown-content">
                       <li><a href="#!">Profile</a></li>
                       <li><a href="#!">Account Settings</a></li>
@@ -110,7 +148,7 @@ define([
                     <div className="white blue-grey-text text-darken-1 nav-wrapper">
                         <a href="#" className="left blue-grey-text text-darken-1 brand-logo hide-on-med-and-down">Logo</a>
                         <a href="#" data-activates="mobile-demo" className="blue-grey-text text-darken-1 button-collapse"><i className="material-icons">menu</i></a>
-                        {this.state.loggedIn ? <a style={{padding:'0 5px'}} className="right blue-grey-text text-darken-1"><i className="material-icons">shopping_cart</i></a> : null}
+                        {this.state.loggedIn ? <a style={{padding:'0 5px'}} className="right blue-grey-text text-darken-1 shopping-cart-icon" onClick={this.toggleCart}><i className="material-icons">shopping_cart</i></a> : null}
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             {!this.state.loggedIn ? <li><a className="blue-grey-text text-darken-1" onClick={this.toggleLogin}>Login</a></li> : <li> <a className="blue-grey-text text-darken-1 dropdown-button" href="#!" data-activates="dropdown1"> Welcome Name<i className="material-icons right">arrow_drop_down</i></a></li>}
                         </ul>
