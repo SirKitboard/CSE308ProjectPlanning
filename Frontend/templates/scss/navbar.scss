@@ -1,14 +1,20 @@
 html, body {
     font-family: Robotto, sans-serif;
+    height:100%;
+    width:100%;
     z-index: 0;
 }
 
 .padNav {
-    margin-top: 72px;
+    padding-top: 64px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 0px;
+    }
 }
 
 .nav-wrapper-outer {
-    z-index: 9;
+    // z-index: 9;
     position:fixed;
     top:0px;
     left:0px;
