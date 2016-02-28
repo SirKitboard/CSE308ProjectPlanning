@@ -3,23 +3,46 @@ define([
     'underscore',
     'react',
     'backbone',
-    'jsx!components/navigation/navbar'
-], function($, _, React, Backbone,NavigationBar) {
+    'jsx!components/navigation/navbar',
+    'jsx!components/homepage/section',
+    'jsx!components/homepage/loginSection'
+], function($, _, React, Backbone,NavigationBar, Section, LoginSection) {
     return React.createClass({
         getInitialState : function() {
+            var loggedIn = false
+            if(window.location.hash == '#loggedIn') {
+                loggedIn = true
+            }
+            var book = {
+                title: null,
+                description: null,
+                author: null
+            }
+            books = [book, book, book, book]
             return {
-                'something' : true
+                 'something' : true,
+                 'login' : books,
+                 'popular' : books,
+                 'newRelease' : books,
+                 loggedIn: loggedIn
             }
         },
         render: function() {
-            var loginSection;
-            var popularSection;
-            var newReleasesSection;
-            var curatedSection;
+            if(this.state.loggedIn) {
+                var recommendedSection = <Section books={this.state.popular} title='Recommended Books' id="Recommended"/>
+            } else {
+                var loginSection = <LoginSection id="login"/>;
+            }
+            var popularSection = <Section books={this.state.popular} title='Popular Books' id="popular"/>;
+            var newReleasesSection = <Section books={this.state.popular} title='New Releases' id="new"/>;
+
             // var
             return(
                 <div>
-                    <NavigationBar/>
+                    {loginSection}
+                    {popularSection}
+                    {newReleasesSection}
+                    {recommendedSection}
                 </div>
             )
         }

@@ -1,17 +1,21 @@
-define()[
+define([
     'jquery',
     'underscore',
     'react',
-    'backbone'
-], function($, _, React, Backbone) {
+    'backbone',
+    'jsx!components/widgets/bookCarousel'
+], function($, _, React, Backbone, BookCarousel) {
     return React.createClass({
-        getInitialState: function() {
+        getInitialState : function () {
             return null;
         },
         render : function() {
             return (
-                <div className="homepage-section" id={this.props.id + "-section"}>
-                    <span class="section-heading">{this.props.title}</span>
+                <div className="homepage-section" id={"section-"+this.props.id}>
+                    <h2 className="section-heading">{this.props.title}</h2>
+                    <div className="books">
+                        <BookCarousel books={this.props.books}/>
+                    </div>
                 </div>
             )
         }

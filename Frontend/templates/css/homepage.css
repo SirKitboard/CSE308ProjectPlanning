@@ -1,8 +1,15 @@
+html, body {
+  font-family: Robotto, sans-serif; }
+
 .nav-wrapper-outer {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%; }
+  .padNav .nav-wrapper-outer {
+    position: relative; }
+  .nav-wrapper-outer .brand-logo {
+    margin-left: 10px; }
   @media screen and (max-width: 992px) {
     .nav-wrapper-outer {
       position: relative; } }
@@ -29,6 +36,30 @@
       overflow-y: scroll;
       overflow-x: hidden; }
 
+.book {
+  background-color: white;
+  margin: 10px 15px;
+  max-width: 250px;
+  position: relative; }
+  .book .cover {
+    width: 100%;
+    height: auto; }
+  .book .title {
+    position: absolute;
+    font-size: 20px;
+    top: 210px;
+    color: white;
+    text-shadow: 1px 1px 6px #000000; }
+  .book .details {
+    padding: 7px; }
+    .book .details p {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .book .details .actions {
+      margin-top: 5px;
+      padding: 5px 0;
+      border-top: 1px rgba(0, 0, 0, 0.2) solid; }
+
 #content {
   height: 2000px; }
 
@@ -36,9 +67,48 @@
   height: 100vh;
   width: 100vw;
   margin: 0;
-  padding: 0; }
-  .homepage-section#section-signin {
+  padding: 0;
+  position: relative; }
+  .homepage-section .section-heading {
+    padding-top: 72px;
+    padding-left: 10px;
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 6px #000000; }
+  .homepage-section#section-login {
     background: url("http://placehold.it/1920x1080");
     background-size: cover; }
+  .homepage-section#section-popular {
+    background: url("http://placehold.it/1920x1080");
+    background-size: cover; }
+  .homepage-section#section-new {
+    background: url("http://placehold.it/1920x1080");
+    background-size: cover; }
+  .homepage-section .books {
+    position: absolute;
+    bottom: 30px;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px;
+    width: 940px; }
+    @media screen and (max-width: 600px) {
+      .homepage-section .books {
+        width: 95; } }
+    @media screen and (max-width: 992px) {
+      .homepage-section .books {
+        width: 90%; } }
+    .homepage-section .books .bookCarousel {
+      width: 100%;
+      margin-right: 10px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow-y: hidden;
+      overflow-x: auto; }
+  .homepage-section .login-buttons {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    max-width: none; }
 
 /*# sourceMappingURL=homepage.css.map */
