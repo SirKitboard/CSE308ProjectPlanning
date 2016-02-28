@@ -1,0 +1,23 @@
+@import 'navbar.scss';
+@import 'book.scss';
+
+.searchBanner {
+    height: 400px;
+    background: url('http://placehold.it/300x400');
+    background-size: cover;
+    margin: 0;
+}
+
+.searchResults {
+    margin-left: 30px;
+}
+
+.searchTabs {
+    i {
+        margin-top: 10px;
+    }
+}
+
+#loadButton {
+    width: 100%;
+}
