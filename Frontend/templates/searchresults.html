@@ -4,13 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div id='content'>
+    <div id='content' class="padNav">
     </div>
+    <div id='navigation'></div>
+    <div id='cart'></div>
 
     <script src="js/bower_components/requirejs/require.js"></script>
     <script type="text/javascript">
         require(['js/config'], function () {
-          require(['init_searchresults']);
+          require(['init_navbar', 'init_searchresults']);
         });
 	</script>
 

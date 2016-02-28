@@ -3,10 +3,9 @@ define([
     'underscore',
     'react',
     'backbone',
-    'jsx!components/navigation/navbar',
     'jsx!components/homepage/section',
     'jsx!components/homepage/loginSection'
-], function($, _, React, Backbone,NavigationBar, Section, LoginSection) {
+], function($, _, React, Backbone, Section, LoginSection) {
     return React.createClass({
         getInitialState : function() {
             var loggedIn = false

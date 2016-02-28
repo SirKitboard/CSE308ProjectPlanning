@@ -3,13 +3,12 @@ define([
     'underscore',
     'backbone',
     'react',
-    'materialize',
-    'jsx!components/navigation/navbar'
-], function($, _, Backbone, React, Materialize, NavigationBar) {
+    'materialize'
+], function($, _, Backbone, React, Materialize) {
     return React.createClass({
         getInitialState : function() {
             return {
-                
+
             }
         },
         render: function() {
@@ -34,7 +33,7 @@ define([
                         <div className="col s12 m6 right-align">
                             <h5>Stats</h5>
                             You've borrowed <span className="bold green-text">Test</span><br/>
-                            You've reviwed <span className="bold green-text">test</span><br/>    
+                            You've reviwed <span className="bold green-text">test</span><br/>
                             You've currently checked out <span className="bold green-text">Test</span><br/>
                         </div>
                       </div>

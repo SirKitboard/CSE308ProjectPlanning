@@ -9,11 +9,13 @@
         <div id="content" class="padNav">
 
         </div>
+        <div id='navigation'></div>
+        <div id='cart'></div>
 
         <script src="js/bower_components/requirejs/require.js"></script>
         <script src-"text/javascript">
             require(['js/config'], function() {
-                require(['init_bookprofile']);
+                require(['init_navbar', 'init_bookprofile']);
             })
         </script>
     </body>

@@ -3,11 +3,10 @@ define([
     'underscore',
     'react',
     'backbone',
-    'jsx!components/navigation/navbar',
     'jsx!components/bookprofile/bookinfo',
     'jsx!components/bookprofile/bookextras',
     'jsx!components/bookprofile/bookrecommend'
-], function($, _,React,Backbone, Navbar, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
+], function($, _,React,Backbone, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
     return React.createClass({
         getInitialState: function() {
             return {
@@ -25,7 +24,6 @@ define([
         render: function() {
             return (
                 <div id="profileContent">
-                    <Navbar />
                     <div className="row" id="bookProfileTop">
                         <div className="col s4">
                             <BookInfoComponent book={this.state.book}/>
