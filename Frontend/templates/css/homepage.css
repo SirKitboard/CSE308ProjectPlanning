@@ -1,7 +1,9 @@
 html, body {
-  font-family: Robotto, sans-serif; }
+  font-family: Robotto, sans-serif;
+  z-index: 0; }
 
 .nav-wrapper-outer {
+  z-index: 999;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -14,12 +16,12 @@ html, body {
     .nav-wrapper-outer {
       position: relative; } }
   .nav-wrapper-outer .nav-wrapper .nav-search {
-    width: 68%;
+    width: 65%;
     margin-left: 13%;
     border-radius: 3px; }
     @media screen and (max-width: 992px) {
       .nav-wrapper-outer .nav-wrapper .nav-search {
-        width: 89%;
+        width: 80%;
         margin-left: 10%; } }
     .nav-wrapper-outer .nav-wrapper .nav-search div i.active {
       color: #000 !important; }
