@@ -16,12 +16,16 @@ define([
                     <div className="row tab-row">
                         <div className="col s12">
                           <ul className="tabs">
-                            <li className="tab col s3"><a className="active" href="#test1">Images</a></li>
-                            <li className="tab col s3"><a href="#test2">Reviews</a></li>
+                            <li className="tab col s6"><a className="active" href="#imagesTab">Images</a></li>
+                            <li className="tab col s6"><a href="#reviewsTab">Reviews</a></li>
                           </ul>
                         </div>
-                        <div id="test1" className="col s12">Images</div>
-                        <div id="test2" className="col s12">Reviews</div>
+                        <div id="imagesTab" className="col s12 valign-wrapper">
+                            <div className="col s5 offset-s3">
+                                <img src="http://placehold.it/500x700" className="valign"/>
+                            </div>
+                        </div>
+                        <div id="reviewsTab" className="col s12">Reviews</div>
                     </div>
                 </div>
             )

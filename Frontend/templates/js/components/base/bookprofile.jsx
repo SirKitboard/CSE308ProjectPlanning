@@ -25,14 +25,14 @@ define([
             return (
                 <div id="profileContent">
                     <div className="row" id="bookProfileTop">
-                        <div className="col s4">
+                        <div className="col l4">
                             <BookInfoComponent book={this.state.book}/>
                         </div>
-                        <div className="col s8">
+                        <div className="col l8">
                             <BookExtrasComponent id="bookExtras"/>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row" id="bookProfileBottom">
                         <BookRecommendComponent />
                     </div>
                 </div>

@@ -3,8 +3,24 @@ define([
     'underscore',
     'react',
     'backbone',
-], function($, _, React, Backbone) {
+    'jsx!components/widgets/bookCarousel'
+], function($, _, React, Backbone, BookCarouselComponent) {
     return React.createClass({
+        getInitialState: function() {
+            var book = {
+                title: null,
+                description: null,
+                author: null
+            };
+            var books = []
+            for (i=0; i<16; i++) {
+                books.push(book);
+            }
+            return {
+                "recommendations": books
+            }
+        },
+
         render: function() {
             return (
                 <div className="recommendContainer">
@@ -12,50 +28,7 @@ define([
                         <p>Similar Books</p>
                     </div>
                     <div className="bookRecommend">
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
-                        <a href="#"><div className="bookPreview">
-                            <img src="http://placehold.it/250x200" className="bookThumb"></img>
-                            <p>Title</p>
-                        </div></a>
+                        <BookCarouselComponent books={this.state.recommendations} />
                     </div>
                 </div>
             )

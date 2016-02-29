@@ -45,7 +45,7 @@ define([
                     <p>Publisher {this.props.book.publisher}</p>
                     <hr />
                     <p>Rating</p>
-                    <button className="btn right" id="addToCart">Add to cart</button>
+                    <button className="btn-large right" id="addToCart">Add to cart</button>
                 </div>
             )
         }
