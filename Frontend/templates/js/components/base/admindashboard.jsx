@@ -13,9 +13,20 @@ define([
         },
         switchTab : function(e) {
             var target = e.target;
+            // debugger;
+
             var index = parseInt(e.target.getAttribute("data-index"));
             this.setState({
                 selectedTab : index
+            })
+            var element = $(e.target);
+            var position = element.offset();
+            var width = element.width();
+            // debugger;
+            $("#adminTabsIndicator").css({
+                left: position.left,
+                width: width
+                // right: position.left + width
             })
         },
         render: function() {
@@ -33,6 +44,7 @@ define([
                             <li className="tab col s3"><a data-index="1" onClick={this.switchTab}>Books</a></li>
                             <li className="tab col s3"><a data-index="2" onClick={this.switchTab}>Users</a></li>
                             <li className="tab col s3"><a data-index="3" onClick={this.switchTab}>Publishers</a></li>
+                            <div id="adminTabsIndicator" className="indicator"/>
                           </ul>
                         </div>
                     </div>
