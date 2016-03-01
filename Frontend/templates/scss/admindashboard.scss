@@ -4,11 +4,41 @@
     #adminTabs {
         padding:0;
         .tabs {
+            position: relative;
             .tab {
                 a {
                     color: #800020;
                 }
+                a:hover {
+                    color: #D81110;
+                }
             }
+            .indicator {
+                position: absolute;
+                bottom: 0;
+                height: 2px;
+                background-color: #f6b2b5;
+                will-change: left, right;
+            }
+        }
+    }
+
+    #reportsTab {
+        .topResults {
+            height:100%;
+            background-image: url(http://www.placehold.it/400x400);
+            background-size: contain;
+            // padding:0;
+            // margin: 0 0.75rem;
+            background-clip:content-box;
+        }
+        .mostDownloaded {
+            height:100%;
+            background-image: url(http://www.placehold.it/400x400);
+            background-size: contain;
+            // padding:0;
+            background-clip:content-box;
+            // margin: 0 0.75rem;
         }
     }
 }

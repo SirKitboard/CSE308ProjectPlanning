@@ -86,7 +86,27 @@ html, body {
 
 #adminPanel #adminTabs {
   padding: 0; }
-  #adminPanel #adminTabs .tabs .tab a {
-    color: #800020; }
+  #adminPanel #adminTabs .tabs {
+    position: relative; }
+    #adminPanel #adminTabs .tabs .tab a {
+      color: #800020; }
+    #adminPanel #adminTabs .tabs .tab a:hover {
+      color: #D81110; }
+    #adminPanel #adminTabs .tabs .indicator {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background-color: #f6b2b5;
+      will-change: left, right; }
+#adminPanel #reportsTab .topResults {
+  height: 100%;
+  background-image: url(http://www.placehold.it/400x400);
+  background-size: contain;
+  background-clip: content-box; }
+#adminPanel #reportsTab .mostDownloaded {
+  height: 100%;
+  background-image: url(http://www.placehold.it/400x400);
+  background-size: contain;
+  background-clip: content-box; }
 
 /*# sourceMappingURL=admindashboard.css.map */
