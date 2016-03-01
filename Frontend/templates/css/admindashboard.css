@@ -84,4 +84,9 @@ html, body {
   background-color: #000000;
   opacity: 0; }
 
+#adminPanel #adminTabs {
+  padding: 0; }
+  #adminPanel #adminTabs .tabs .tab a {
+    color: #800020; }
+
 /*# sourceMappingURL=admindashboard.css.map */

@@ -25,14 +25,16 @@ define([
                     tab = <ReportsTab/>
             }
             return (
-                <div className="row">
-                    <div className="col s12">
-                      <ul className="tabs">
-                        <li className="tab col s3"><a data-index="0" onClick={this.switchTab}>Reports</a></li>
-                        <li className="tab col s3"><a data-index="1" onClick={this.switchTab}>Books</a></li>
-                        <li className="tab col s3"><a data-index="2" onClick={this.switchTab}>Users</a></li>
-                        <li className="tab col s3"><a data-index="3" onClick={this.switchTab}>Publishers</a></li>
-                      </ul>
+                <div id="adminPanel">
+                    <div className="white row z-depth-1">
+                        <div className="col s12" id="adminTabs">
+                          <ul className="tabs">
+                            <li className="tab col s3"><a data-index="0" onClick={this.switchTab}>Reports</a></li>
+                            <li className="tab col s3"><a data-index="1" onClick={this.switchTab}>Books</a></li>
+                            <li className="tab col s3"><a data-index="2" onClick={this.switchTab}>Users</a></li>
+                            <li className="tab col s3"><a data-index="3" onClick={this.switchTab}>Publishers</a></li>
+                          </ul>
+                        </div>
                     </div>
                     {tab}
                 </div>
