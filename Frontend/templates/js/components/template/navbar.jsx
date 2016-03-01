@@ -29,6 +29,10 @@ define([
         componentDidMount : function() {
             $(".dropdown-button").dropdown();
             $(".button-collapse").sideNav();
+            var shoppingCart = <ShoppingCartComponent onClose={this.toggleCart} books={this.state.books}/>
+            if(this.state.loggedIn) {
+                ReactDOM.render(shoppingCart, document.getElementById('cart'))
+            }
         },
         toggleLogin : function() {
             if(this.state.loggedIn) {
@@ -121,8 +125,6 @@ define([
                 </div>
             )
             if(this.state.loggedIn) {
-                var shoppingCart = <ShoppingCartComponent onClose={this.toggleCart} books={this.state.books}/>
-                ReactDOM.render(shoppingCart, document.getElementById('cart'))
                 var navItems = (<ul id="dropdown1" className="dropdown-content">
                       <li><a href="#!">Profile</a></li>
                       <li><a href="#!">Account Settings</a></li>
