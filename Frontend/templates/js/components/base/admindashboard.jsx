@@ -3,8 +3,10 @@ define([
     'underscore',
     'react',
     'backbone',
-    'jsx!components/admindashboard/reportsTab'
-], function($, _,React,Backbone, ReportsTab) { //, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
+    'jsx!components/admindashboard/reportsTab',
+    'jsx!components/admindashboard/booksTab',
+    'jsx!components/admindashboard/userstab',
+], function($, _,React,Backbone, ReportsTab, BooksTab, UsersTab) { //, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
     return React.createClass({
         getInitialState: function() {
             return {
@@ -23,17 +25,23 @@ define([
             var position = element.offset();
             var width = element.width();
             // debugger;
-            $("#adminTabsIndicator").css({
+            $("#adminTabsIndicator").animate({
                 left: position.left,
                 width: width
-                // right: position.left + width
-            })
+            }, 300);
         },
         render: function() {
             var tab = null;
             switch(this.state.selectedTab) {
                 case 0:
                     tab = <ReportsTab/>
+                    break;
+                case 1:
+                    tab = <BooksTab/>
+                    break;
+                case 2:
+                    tab = <UsersTab/>
+                    break;
             }
             return (
                 <div id="adminPanel">

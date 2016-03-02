@@ -7,10 +7,6 @@ html, body {
 
 .padNav {
     padding-top: 64px;
-
-    @media screen and (max-width: 992px) {
-        padding-top: 0px;
-    }
 }
 
 .nav-wrapper-outer {
@@ -24,7 +20,7 @@ html, body {
         margin-left: 10px;
     }
     @media screen and (max-width: 992px) {
-        position:relative;
+        position:absolute;
         // margin-left: 10%
     }
     .nav-wrapper {

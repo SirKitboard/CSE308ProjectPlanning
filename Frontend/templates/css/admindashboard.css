@@ -6,9 +6,6 @@ html, body {
 
 .padNav {
   padding-top: 64px; }
-  @media screen and (max-width: 992px) {
-    .padNav {
-      padding-top: 0px; } }
 
 .nav-wrapper-outer {
   position: fixed;
@@ -19,7 +16,7 @@ html, body {
     margin-left: 10px; }
   @media screen and (max-width: 992px) {
     .nav-wrapper-outer {
-      position: relative; } }
+      position: absolute; } }
   .nav-wrapper-outer .nav-wrapper .nav-search {
     width: 65%;
     margin-left: 13%;
@@ -84,6 +81,9 @@ html, body {
   background-color: #000000;
   opacity: 0; }
 
+nav {
+  box-shadow: none; }
+
 #adminPanel #adminTabs {
   padding: 0; }
   #adminPanel #adminTabs .tabs {
@@ -98,15 +98,36 @@ html, body {
       height: 2px;
       background-color: #f6b2b5;
       will-change: left, right; }
-#adminPanel #reportsTab .topResults {
-  height: 100%;
-  background-image: url(http://www.placehold.it/400x400);
-  background-size: contain;
-  background-clip: content-box; }
-#adminPanel #reportsTab .mostDownloaded {
-  height: 100%;
-  background-image: url(http://www.placehold.it/400x400);
-  background-size: contain;
-  background-clip: content-box; }
+#adminPanel #reportsTab {
+  margin: 0;
+  height: calc(100% - 135px); }
+  #adminPanel #reportsTab .topResults {
+    height: 100%;
+    background-image: url(http://www.placehold.it/400x400);
+    background-size: contain;
+    background-clip: content-box; }
+  #adminPanel #reportsTab .mostDownloaded {
+    height: 100%;
+    background-image: url(http://www.placehold.it/400x400);
+    background-size: contain;
+    background-clip: content-box; }
+#adminPanel #booksTab {
+  height: calc(100% - 135px);
+  margin: 0; }
+  #adminPanel #booksTab .bookList {
+    overflow-y: scroll;
+    height: 100%; }
+  #adminPanel #booksTab .bookDetails {
+    height: 100%;
+    overflow-y: scroll; }
+#adminPanel #usersTab {
+  height: calc(100% - 135px);
+  margin: 0; }
+  #adminPanel #usersTab .userList {
+    overflow-y: scroll;
+    height: 100%; }
+  #adminPanel #usersTab .userDetails {
+    height: 100%;
+    overflow-y: scroll; }
 
 /*# sourceMappingURL=admindashboard.css.map */

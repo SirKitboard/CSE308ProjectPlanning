@@ -1,5 +1,8 @@
 @import "navbar.scss";
 
+nav {
+    box-shadow: none;
+}
 #adminPanel {
     #adminTabs {
         padding:0;
@@ -24,12 +27,12 @@
     }
 
     #reportsTab {
+        margin:0;
+        height: calc(100% - 135px);
         .topResults {
             height:100%;
             background-image: url(http://www.placehold.it/400x400);
             background-size: contain;
-            // padding:0;
-            // margin: 0 0.75rem;
             background-clip:content-box;
         }
         .mostDownloaded {
@@ -39,6 +42,32 @@
             // padding:0;
             background-clip:content-box;
             // margin: 0 0.75rem;
+        }
+    }
+
+    #booksTab {
+        height: calc(100% - 135px);
+        margin:0;
+        .bookList {
+            overflow-y: scroll;
+            height:100%;
+        }
+        .bookDetails {
+            height:100%;
+            overflow-y: scroll;
+        }
+    }
+
+    #usersTab {
+        height: calc(100% - 135px);
+        margin:0;
+        .userList {
+            overflow-y: scroll;
+            height:100%;
+        }
+        .userDetails {
+            height:100%;
+            overflow-y: scroll;
         }
     }
 }
