@@ -14,13 +14,16 @@ define([
                       <p className="center-align">{this.props.book.available}</p>
                     </div>
                 </div>)
+                var disabled = ""
             } else {
                   var card =
-                  (<div className="card red" id="bookAvailable">
+                  (<div className="card red z-depth-1" id="bookAvailable">
                       <div className="card-content white-text">
                         <p className="center-align">{this.props.book.available}</p>
                       </div>
                   </div>)
+
+                  var disabled = "disabled"
             }
 
 
@@ -28,7 +31,7 @@ define([
                 <div id="bookInfo">
                     <h2>{this.props.book.title}</h2>
                     <h5>by {this.props.book.author}</h5>
-                    <h5 id="bookAvailable">{this.props.book.available}</h5>
+                    {card}
                     <p>ISBN: {this.props.book.isbn}</p>
                     <p>Description</p>
                     <hr />
@@ -45,7 +48,7 @@ define([
                     <p>Publisher {this.props.book.publisher}</p>
                     <hr />
                     <p>Rating</p>
-                    <button className="btn-large right" id="addToCart">Add to cart</button>
+                    <button className= {"btn-large right " + disabled} id="addToCart">Add to cart</button>
                 </div>
             )
         }

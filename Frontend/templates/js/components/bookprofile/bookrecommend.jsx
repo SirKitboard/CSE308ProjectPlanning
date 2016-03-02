@@ -25,7 +25,7 @@ define([
             return (
                 <div className="recommendContainer">
                     <div>
-                        <p>Similar Books</p>
+                        <h5>Similar Books</h5>
                     </div>
                     <div className="bookRecommend">
                         <BookCarouselComponent books={this.state.recommendations} />

@@ -14,7 +14,7 @@ define([
                     "title": "Hello World",
                     "author": "John Smith",
                     "isbn": 12345678910,
-                    "available": "Available",
+                    "available": "Unavailable",
                     "year": 1994,
                     "publisher": "John Doe"
                 }

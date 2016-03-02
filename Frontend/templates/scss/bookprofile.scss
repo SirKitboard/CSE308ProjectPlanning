@@ -9,6 +9,7 @@
     padding: 20px;
     overflow-x: hidden;
     padding: 0;
+    z-index: 1;
 }
 
 .row .col.s12 {
@@ -20,7 +21,7 @@
 }
 
 #bookProfileTop {
-    height: 1000px;
+    height: 900px;
 }
 
 #bookInfo {
@@ -30,10 +31,13 @@
     p {
         font-size: 110%;
     }
+    .card {
+        z-index: 1;
+    }
 }
 
 #addToCart {
-    margin-top: 200px;
+    margin-top: 60px;
 }
 
 #bookAvailable {
@@ -54,7 +58,6 @@
 }
 
 .recommendContainer {
-    border-top: 1px solid black;
     padding: 15px;
 }
 
@@ -64,7 +67,7 @@
 }
 
 #imagesTab {
-    height: 900px;
+    height: 800px;
     background-color: gray;
     img {
         margin-left: 50px;
