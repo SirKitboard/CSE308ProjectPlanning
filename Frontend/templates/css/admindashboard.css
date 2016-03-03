@@ -169,5 +169,78 @@ nav {
         @media screen and (max-width: 600px) {
           #adminPanel #usersTab .userDetails .container .navigateTo li {
             text-align: center; } }
+      #adminPanel #usersTab .userDetails .container .graph-wrapper {
+        margin-bottom: 0; }
+        #adminPanel #usersTab .userDetails .container .graph-wrapper .col {
+          padding: 0; }
+        #adminPanel #usersTab .userDetails .container .graph-wrapper .graph {
+          width: 100%;
+          height: auto;
+          border: 1px solid #333; }
+      #adminPanel #usersTab .userDetails .container .stats {
+        border: 1px solid #333;
+        text-align: center; }
+        #adminPanel #usersTab .userDetails .container .stats .col {
+          border-right: 1px solid #333; }
+#adminPanel #publishersTab {
+  height: calc(100% - 135px);
+  margin: 0; }
+  #adminPanel #publishersTab .publisherList {
+    overflow-y: scroll;
+    height: 100%; }
+  #adminPanel #publishersTab .publisherDetails {
+    height: 100%;
+    overflow-y: scroll; }
+    #adminPanel #publishersTab .publisherDetails .col {
+      position: relative; }
+    #adminPanel #publishersTab .publisherDetails .coverPic {
+      background-image: url(http://placehold.it/800x400);
+      background-size: cover;
+      width: 100%;
+      height: 200px; }
+    #adminPanel #publishersTab .publisherDetails .container {
+      width: 100%;
+      position: relative;
+      top: -80px; }
+      #adminPanel #publishersTab .publisherDetails .container .propic {
+        width: 100%;
+        height: auto;
+        min-width: 75px; }
+      #adminPanel #publishersTab .publisherDetails .container .publishername {
+        margin: 5px 0;
+        color: white; }
+      #adminPanel #publishersTab .publisherDetails .container .publisher-role {
+        margin: 3px 2px;
+        color: white; }
+      #adminPanel #publishersTab .publisherDetails .container .publisher-email {
+        margin-top: 20px; }
+      #adminPanel #publishersTab .publisherDetails .container .btn {
+        width: 100%;
+        position: absolute;
+        right: 40px;
+        top: 50px; }
+      #adminPanel #publishersTab .publisherDetails .container .navigateTo li {
+        padding: 3px;
+        margin-top: -1px;
+        width: 100%;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        border-collapse: collapse; }
+        @media screen and (max-width: 600px) {
+          #adminPanel #publishersTab .publisherDetails .container .navigateTo li {
+            text-align: center; } }
+      #adminPanel #publishersTab .publisherDetails .container .graph-wrapper {
+        margin-bottom: 0; }
+        #adminPanel #publishersTab .publisherDetails .container .graph-wrapper .col {
+          padding: 0; }
+        #adminPanel #publishersTab .publisherDetails .container .graph-wrapper .graph {
+          width: 100%;
+          height: auto;
+          border: 1px solid #333; }
+      #adminPanel #publishersTab .publisherDetails .container .stats {
+        border: 1px solid #333;
+        text-align: center; }
+        #adminPanel #publishersTab .publisherDetails .container .stats .col {
+          border-right: 1px solid #333; }
 
 /*# sourceMappingURL=admindashboard.css.map */

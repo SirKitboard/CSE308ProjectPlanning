@@ -62,14 +62,25 @@ define([
                                     </ul>
                                 </div>
                                 <div className="col s12 m8 l9">
-                                    <div className="row">
+                                    <div className="row graph-wrapper">
                                         <div className="col s12">
-                                            <img className="graph" src="http://placehold.it/500x400"/>
+                                            <img className="graph" src="http://placehold.it/500x300"/>
                                         </div>
                                     </div>
-                                    {/*<div className="row">
-                                        <div className=""
-                                    </div>*/}
+                                    <div className="row stats">
+                                        <div className="col s12 m4">
+                                            <p># of books borrowed</p>
+                                            <h4>15</h4>
+                                        </div>
+                                        <div className="col s12 m4">
+                                            <p># of books reviewed</p>
+                                            <h4>10</h4>
+                                        </div>
+                                        <div className="col s12 m4">
+                                            <p>Reputation</p>
+                                            <h4>20</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
