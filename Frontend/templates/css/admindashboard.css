@@ -242,5 +242,7 @@ nav {
         text-align: center; }
         #adminPanel #publishersTab .publisherDetails .container .stats .col {
           border-right: 1px solid #333; }
+      #adminPanel #publishersTab .publisherDetails .container p {
+        text-align: justify; }
 
 /*# sourceMappingURL=admindashboard.css.map */

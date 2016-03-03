@@ -63,6 +63,7 @@ define([
                                     </ul>
                                 </div>
                                 <div className="col s12 m8 l9">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel pulvinar mi. Cras commodo feugiat congue. Nulla ut lobortis eros, sit amet porta dolor. Maecenas nec massa ut tortor tempus cursus. Phasellus interdum, mi at ornare faucibus, tortor turpis consectetur felis, id finibus mauris tortor sed sem. Nunc ultricies, augue id lobortis ullamcorper, ligula enim pharetra purus, vitae euismod enim mauris a augue. Integer mattis egestas dapibus. Duis pharetra felis quis feugiat imperdiet. Nulla convallis maximus ligula, in sagittis sem fermentum quis. Integer posuere augue ac turpis aliquet, non dignissim tellus lacinia.</p>
                                 </div>
                             </div>
                         </div>
