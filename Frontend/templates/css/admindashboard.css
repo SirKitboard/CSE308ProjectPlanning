@@ -21,6 +21,8 @@ html, body {
     width: 65%;
     margin-left: 13%;
     border-radius: 3px; }
+    .nav-wrapper-outer .nav-wrapper .nav-search #search {
+      width: calc(100% - 5rem); }
     @media screen and (max-width: 992px) {
       .nav-wrapper-outer .nav-wrapper .nav-search {
         width: 80%;
@@ -129,5 +131,43 @@ nav {
   #adminPanel #usersTab .userDetails {
     height: 100%;
     overflow-y: scroll; }
+    #adminPanel #usersTab .userDetails .col {
+      position: relative; }
+    #adminPanel #usersTab .userDetails .coverPic {
+      background-image: url(http://placehold.it/800x400);
+      background-size: cover;
+      width: 100%;
+      height: 200px; }
+    #adminPanel #usersTab .userDetails .container {
+      width: 100%;
+      position: relative;
+      top: -80px; }
+      #adminPanel #usersTab .userDetails .container .propic {
+        width: 100%;
+        height: auto;
+        min-width: 75px; }
+      #adminPanel #usersTab .userDetails .container .username {
+        margin: 5px 0;
+        color: white; }
+      #adminPanel #usersTab .userDetails .container .user-role {
+        margin: 3px 2px;
+        color: white; }
+      #adminPanel #usersTab .userDetails .container .user-email {
+        margin-top: 20px; }
+      #adminPanel #usersTab .userDetails .container .btn {
+        width: 100%;
+        position: absolute;
+        right: 40px;
+        top: 50px; }
+      #adminPanel #usersTab .userDetails .container .navigateTo li {
+        padding: 3px;
+        margin-top: -1px;
+        width: 100%;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        border-collapse: collapse; }
+        @media screen and (max-width: 600px) {
+          #adminPanel #usersTab .userDetails .container .navigateTo li {
+            text-align: center; } }
 
 /*# sourceMappingURL=admindashboard.css.map */

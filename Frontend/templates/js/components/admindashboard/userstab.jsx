@@ -22,7 +22,7 @@ define([
                         <div className="input-field">
                           <i className="material-icons prefix">search</i>
                           <input id="search" type="text" className="validate"/>
-                          <label for="search">Search</label>
+                          <label htmlFor="search">Search</label>
                         </div>
                         <ul>
                             {
@@ -37,6 +37,42 @@ define([
                         </ul>
                     </div>
                     <div className="col s12 m8 userDetails">
+                        <div className="coverPic">
+                        </div>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col offset-s1 s3 offset-m1 m3 offset-l1 l2">
+                                    <img className="propic z-depth-1" src="http://placehold.it/200x200"/>
+                                </div>
+                                <div className="col s5  l6">
+                                    <h4 className="username">Username</h4>
+                                    <h5 className="user-role">Role</h5>
+                                    <h6 className="user-email">Email : <a href="mailto:xxx@xx.com">email@mail.com</a></h6>
+                                </div>
+                                <div className="col s3 l3">
+                                    <a className="btn waves-effect waves-light">Go To Page</a>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col offset-s2 s8 offset-m1 m3 offset-l1 l2">
+                                    <ul className="navigateTo">
+                                        <li><i className="material-icons prefix">person</i>Profile</li>
+                                        <li><i className="material-icons prefix">book</i>Wishlist</li>
+                                        <li><i className="material-icons prefix">rate_review</i>Reviews</li>
+                                    </ul>
+                                </div>
+                                <div className="col s12 m8 l9">
+                                    <div className="row">
+                                        <div className="col s12">
+                                            <img className="graph" src="http://placehold.it/500x400"/>
+                                        </div>
+                                    </div>
+                                    {/*<div className="row">
+                                        <div className=""
+                                    </div>*/}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )

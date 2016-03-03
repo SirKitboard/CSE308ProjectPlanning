@@ -28,6 +28,10 @@ html, body {
             width: 65%;
             margin-left: 13%;
             border-radius: 3px;
+
+            #search {
+                width: calc(100% - 5rem);
+            }
             // @include media(min-width: 768px) {
             //
             // }

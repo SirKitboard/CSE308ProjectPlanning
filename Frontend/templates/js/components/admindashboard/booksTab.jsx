@@ -28,7 +28,7 @@ define([
                         <div className="input-field">
                           <i className="material-icons prefix">search</i>
                           <input id="search" type="text" className="validate"/>
-                          <label for="search">Search</label>
+                          <label htmlFor="search">Search</label>
                         </div>
                         <ul>
                             {
