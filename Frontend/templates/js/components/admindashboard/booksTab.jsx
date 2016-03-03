@@ -25,6 +25,11 @@ define([
             return (
                 <div id="booksTab" className="row">
                     <div className="col s12 m4 bookList">
+                        <div className="input-field">
+                          <i className="material-icons prefix">search</i>
+                          <input id="search" type="text" className="validate"/>
+                          <label for="search">Search</label>
+                        </div>
                         <ul>
                             {
                                 _.map(this.state.books, function(book) {

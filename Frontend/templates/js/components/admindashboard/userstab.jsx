@@ -19,6 +19,11 @@ define([
             return (
                 <div id="usersTab" className="row">
                     <div className="col s12 m4 userList">
+                        <div className="input-field">
+                          <i className="material-icons prefix">search</i>
+                          <input id="search" type="text" className="validate"/>
+                          <label for="search">Search</label>
+                        </div>
                         <ul>
                             {
                                 _.map(this.state.users, function(user) {
