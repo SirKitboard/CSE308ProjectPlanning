@@ -6,7 +6,8 @@ define([
     'jsx!components/admindashboard/reportsTab',
     'jsx!components/admindashboard/booksTab',
     'jsx!components/admindashboard/userstab',
-], function($, _,React,Backbone, ReportsTab, BooksTab, UsersTab) { //, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
+    'jsx!components/admindashboard/publisherstab'
+], function($, _,React,Backbone, ReportsTab, BooksTab, UsersTab, PublishersTab) { //, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
     return React.createClass({
         getInitialState: function() {
             return {
@@ -27,7 +28,7 @@ define([
             // debugger;
             $("#adminTabsIndicator").animate({
                 left: position.left,
-                width: width
+                width: width - 5
             }, 300);
         },
         render: function() {
@@ -41,6 +42,9 @@ define([
                     break;
                 case 2:
                     tab = <UsersTab/>
+                    break;
+                case 3:
+                    tab = <PublishersTab/>
                     break;
             }
             return (
