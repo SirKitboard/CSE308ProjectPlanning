@@ -36,9 +36,9 @@ define([
                         </div>
                         <div className="col s12 m6 right-align">
                             <h5>Stats</h5>
-                            You borrowed <span className="bold green-text"></span><br/>
+                            You Borrowed <span className="bold green-text"></span><br/>
                             You Reviewed <span className="bold green-text"></span><br/>
-                            You Currently Checked out <span className="bold green-text"></span><br/>
+                            You Currently Checked Out <span className="bold green-text"></span><br/>
                             
                         </div>
                     </div>
