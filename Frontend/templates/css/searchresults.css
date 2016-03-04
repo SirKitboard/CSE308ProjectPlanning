@@ -1,24 +1,28 @@
 html, body {
   font-family: Robotto, sans-serif;
+  height: 100%;
+  width: 100%;
   z-index: 0; }
 
+.padNav {
+  padding-top: 64px; }
+
 .nav-wrapper-outer {
-  z-index: 9;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%; }
-  .padNav .nav-wrapper-outer {
-    position: relative; }
   .nav-wrapper-outer .brand-logo {
     margin-left: 10px; }
   @media screen and (max-width: 992px) {
     .nav-wrapper-outer {
-      position: relative; } }
+      position: absolute; } }
   .nav-wrapper-outer .nav-wrapper .nav-search {
     width: 65%;
     margin-left: 13%;
     border-radius: 3px; }
+    .nav-wrapper-outer .nav-wrapper .nav-search #search {
+      width: calc(100% - 5rem); }
     @media screen and (max-width: 992px) {
       .nav-wrapper-outer .nav-wrapper .nav-search {
         width: 80%;
@@ -83,7 +87,8 @@ html, body {
   background-color: white;
   margin: 10px 15px;
   max-width: 250px;
-  position: relative; }
+  position: relative;
+  text-align: left; }
   .book .cover {
     width: 100%;
     height: auto; }
@@ -103,6 +108,9 @@ html, body {
       padding: 5px 0;
       border-top: 1px rgba(0, 0, 0, 0.2) solid; }
 
+.searchNav .nav-wrapper-outer {
+  z-index: 10000000; }
+
 .searchBanner {
   height: 400px;
   background: url("http://placehold.it/300x400");
@@ -110,7 +118,10 @@ html, body {
   margin: 0; }
 
 .searchResults {
-  margin-left: 30px; }
+  text-align: center; }
+
+.searchTabs i {
+  margin-top: 10px; }
 
 #loadButton {
   width: 100%; }

@@ -14,7 +14,7 @@ define([
                 author: null
             };
             books = []
-            for (i=0; i<16; i++) {
+            for (i=0; i<10; i++) {
                 books.push(book)
             }
             return {
@@ -30,7 +30,6 @@ define([
         render: function() {
             return(
                 <div>
-                    <NavigationBar/>
                     <div className="row searchBanner valign-wrapper"></div>
                     <div className="row tab-row searchTabs z-depth-1">
                         <div className="col s12">
