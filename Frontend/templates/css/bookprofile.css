@@ -87,7 +87,8 @@ html, body {
   background-color: white;
   margin: 10px 15px;
   max-width: 250px;
-  position: relative; }
+  position: relative;
+  text-align: left; }
   .book .cover {
     width: 100%;
     height: auto; }
@@ -131,14 +132,21 @@ html, body {
 #bookInfo {
   height: 100%;
   padding: 10px;
-  overflow-y: auto; }
+  overflow-y: auto;
+  position: relative; }
   #bookInfo p {
     font-size: 110%; }
   #bookInfo .card {
     z-index: 1; }
+  #bookInfo .left-align {
+    display: inline-block; }
+  #bookInfo .right-align {
+    display: inline-block;
+    position: absolute;
+    right: 12px; }
 
 #addToCart {
-  margin-top: 60px; }
+  margin-top: 80px; }
 
 #bookAvailable {
   margin-top: 50px;

@@ -33,16 +33,25 @@
     height: 100%;
     padding: 10px;
     overflow-y: auto;
+    position: relative;
     p {
         font-size: 110%;
     }
     .card {
         z-index: 1;
     }
+    .left-align {
+        display: inline-block;
+    }
+    .right-align {
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+    }
 }
 
 #addToCart {
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 #bookAvailable {

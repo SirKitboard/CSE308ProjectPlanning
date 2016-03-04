@@ -13,7 +13,7 @@ define([
                 author: null
             };
             var books = []
-            for (i=0; i<16; i++) {
+            for (i=0; i<10; i++) {
                 books.push(book);
             }
             return {

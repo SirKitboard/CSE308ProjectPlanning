@@ -33,8 +33,8 @@ define([
                     <h5>by {this.props.book.author}</h5>
                     {card}
                     <p>ISBN: {this.props.book.isbn}</p>
-                    <p>Description</p>
                     <hr />
+                    <p>Description</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -43,11 +43,17 @@ define([
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                     </p>
                     <hr />
-                    <p>Year {this.props.book.year}</p>
+                    <span>
+                        <p className="left-align">Year</p><p className="right-align">{this.props.book.year}</p>
+                    </span>
                     <hr />
-                    <p>Publisher {this.props.book.publisher}</p>
+                    <span>
+                        <p className="left-align">Publisher</p><p className="right-align">{this.props.book.publisher}</p>
+                    </span>
                     <hr />
-                    <p>Rating</p>
+                    <span>
+                        <p className="left-align">Rating</p><p className="right-align"></p>
+                    </span>
                     <button className= {"btn-large right " + disabled} id="addToCart">Add to cart</button>
                 </div>
             )
