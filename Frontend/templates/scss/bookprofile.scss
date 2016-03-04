@@ -1,19 +1,10 @@
 @import "navbar.scss";
 @import "book.scss";
 
-.tab-row {
-    @media screen and (max-width: 992px) {
-        position:relative;
+.bookNav {
+    .nav-wrapper-outer {
+        z-index: 10000000;
     }
-    margin-top: 20px;
-    padding: 20px;
-    overflow-x: hidden;
-    padding: 0;
-    z-index: 1;
-}
-
-.row .col.s12 {
-    width: 101%;
 }
 
 #profileContent {
@@ -22,6 +13,20 @@
 
 #bookProfileTop {
     height: 900px;
+    .tab-row {
+        @media screen and (max-width: 992px) {
+            position:relative;
+        }
+        margin-top: 20px;
+        padding: 20px;
+        overflow-x: hidden;
+        padding: 0;
+        z-index: 1;
+    }
+    .row .col.s12 {
+        width: 101%;
+    }
+    padding-right: 10px;
 }
 
 #bookInfo {
@@ -70,7 +75,8 @@
     height: 800px;
     background-color: gray;
     img {
-        margin-left: 50px;
+        display: block;
+        margin: auto;
     }
 }
 

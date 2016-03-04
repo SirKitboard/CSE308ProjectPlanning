@@ -21,9 +21,7 @@ define([
                           </ul>
                         </div>
                         <div id="imagesTab" className="col s12 valign-wrapper">
-                            <div className="col s5 offset-s3">
-                                <img src="http://placehold.it/500x700" className="valign"/>
-                            </div>
+                            <img src="http://placehold.it/500x700" className="valign"/>
                         </div>
                         <div id="reviewsTab" className="col s12">Reviews</div>
                     </div>
