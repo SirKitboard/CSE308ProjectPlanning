@@ -22,7 +22,7 @@ define([
         render: function() {
             return (
                 <div id="booksTab" className="row">
-                    <div className="col s12 m4 bookList">
+                    <div className="col s12 m3 bookList">
                         <div className="input-field">
                           <i className="material-icons prefix">search</i>
                           <input id="search" type="text" className="validate"/>
@@ -40,7 +40,7 @@ define([
                             }
                         </ul>
                     </div>
-                    <div className="col s12 m8 BookDetails">
+                    <div className="col s12 m9 BookDetails">
                         <BookInfo book={this.state.books[0]}/>
                     </div>
                 </div>

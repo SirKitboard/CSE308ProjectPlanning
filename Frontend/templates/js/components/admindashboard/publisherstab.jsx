@@ -16,7 +16,7 @@ define([
         render: function() {
             return (
                 <div id="publishersTab" className="row">
-                    <div className="col s12 m4 publisherList">
+                    <div className="col s12 m3 publisherList">
                         <div className="input-field">
                           <i className="material-icons prefix">search</i>
                           <input id="search" type="text" className="validate"/>
@@ -34,7 +34,7 @@ define([
                             }
                         </ul>
                     </div>
-                    <div className="col s12 m8 publisherDetails">
+                    <div className="col s12 m9 publisherDetails">
                         <div className="coverPic">
                         </div>
                         <div className="container">
