@@ -1,10 +1,8 @@
 define([
-    'jquery',
     'underscore',
     'react',
-    'backbone',
     'jsx!components/widgets/book'
-], function($, _, React, Backbone, Book) {
+], function(_, React, Book) {
     return React.createClass({
         render: function() {
             return (

@@ -1,11 +1,8 @@
 define([
-    'jquery',
     "underscore",
     "react",
-    "backbone",
-    'materialize',
 	'jsx!components/template/book'
-], function($, _, React, backbone, Materialize, BookComponent) {
+], function(_, React, BookComponent) {
     return React.createClass({
         getInitialState: function(){
             // debugger;

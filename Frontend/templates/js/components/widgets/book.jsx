@@ -1,9 +1,7 @@
 define([
-	'jquery',
 	'underscore',
-	'react',
-	'backbone'
-], function($, _, React, Backbone) {
+	'react'
+], function(_, React) {
 	return React.createClass({
 		getInitialState : function() {
 			return null;

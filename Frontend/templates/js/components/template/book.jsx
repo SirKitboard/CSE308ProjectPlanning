@@ -1,10 +1,7 @@
 define([
-    'jquery',
     "underscore",
     "react",
-    "backbone",
-    'materialize',
-], function($, _, React, backbone, Materialize) {
+], function(_, React) {
     return React.createClass({
         getInitialState: function(){
 			return null;

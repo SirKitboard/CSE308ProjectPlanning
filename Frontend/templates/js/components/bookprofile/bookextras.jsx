@@ -1,10 +1,7 @@
 define([
-    'jquery',
     'underscore',
-    'react',
-    'backbone',
-    'materialize'
-], function($, _, React, Backbone, Materialize) {
+    'react'
+], function(_, React) {
     return React.createClass({
         componentDidMount: function() {
             $('ul.tabs').tabs();

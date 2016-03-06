@@ -1,13 +1,11 @@
 define([
-    'jquery',
     'underscore',
     'react',
-    'backbone',
     'jsx!components/admindashboard/reportsTab',
     'jsx!components/admindashboard/booksTab',
     'jsx!components/admindashboard/userstab',
     'jsx!components/admindashboard/publisherstab'
-], function($, _,React,Backbone, ReportsTab, BooksTab, UsersTab, PublishersTab) { //, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
+], function(_,React, ReportsTab, BooksTab, UsersTab, PublishersTab) { //, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
     return React.createClass({
         getInitialState: function() {
             return {

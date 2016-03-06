@@ -1,10 +1,8 @@
 define([
-    'jquery',
     'underscore',
-    'backbone',
     'react',
     'materialize'
-], function($, _, Backbone, React, Materialize) {
+], function(_, React, Materialize) {
     return React.createClass({
         getInitialState : function() {
             return {
@@ -23,7 +21,7 @@ define([
         profileInfo = (
                     <div className="profile-and-stats row">
                         <div className="col s12 m6 row profile">
-                           
+
                             <div className="col s8 greeting">
                             <img className="activator" src = {imageURL}/>
                                 <h4>firstName lastName</h4>
@@ -39,10 +37,10 @@ define([
                             You Borrowed <span className="bold green-text"></span><br/>
                             You Reviewed <span className="bold green-text"></span><br/>
                             You Currently Checked Out <span className="bold green-text"></span><br/>
-                            
+
                         </div>
                     </div>
-                )   
+                )
 
         return (
                 <div className="container" style={{width:'90%', maxWidth:'none'}}>
@@ -65,7 +63,7 @@ define([
                           <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                         </li>
                     </ul>
-                       
+
                 </div>
 );
         }

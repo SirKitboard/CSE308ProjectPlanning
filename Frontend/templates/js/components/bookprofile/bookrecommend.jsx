@@ -1,10 +1,8 @@
 define([
-    'jquery',
     'underscore',
     'react',
-    'backbone',
     'jsx!components/widgets/bookCarousel'
-], function($, _, React, Backbone, BookCarouselComponent) {
+], function(_, React, BookCarouselComponent) {
     return React.createClass({
         getInitialState: function() {
             var book = {

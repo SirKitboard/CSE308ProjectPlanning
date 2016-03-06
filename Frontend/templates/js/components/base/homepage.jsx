@@ -1,11 +1,9 @@
 define([
-    'jquery',
     'underscore',
     'react',
-    'backbone',
     'jsx!components/homepage/section',
     'jsx!components/homepage/loginSection'
-], function($, _, React, Backbone, Section, LoginSection) {
+], function(_, React, Section, LoginSection) {
     return React.createClass({
         getInitialState : function() {
             var loggedIn = false

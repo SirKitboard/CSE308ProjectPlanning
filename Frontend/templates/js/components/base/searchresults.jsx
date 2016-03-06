@@ -1,11 +1,9 @@
 define([
-    'jquery',
     'underscore',
     'react',
-    'backbone',
     'jsx!components/template/navbar',
     'jsx!components/searchprofile/results'
-], function($, _, React, Backbone, NavigationBar, SearchResults) {
+], function(_, React, NavigationBar, SearchResults) {
     return React.createClass({
         getInitialState : function() {
             var book = {

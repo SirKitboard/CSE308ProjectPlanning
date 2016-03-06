@@ -1,12 +1,9 @@
 define([
-    'jquery',
     "underscore",
     "react",
-    "backbone",
-    'materialize',
     'jsx!components/template/shoppingcart',
     'react-dom'
-], function($, _, React, backbone, Materialize, ShoppingCartComponent, ReactDOM) {
+], function(_, React, ShoppingCartComponent, ReactDOM) {
     return React.createClass({
         getInitialState: function(){
             // debugger;

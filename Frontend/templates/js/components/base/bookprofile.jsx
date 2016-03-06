@@ -1,12 +1,10 @@
 define([
-    'jquery',
     'underscore',
     'react',
-    'backbone',
     'jsx!components/bookprofile/bookinfo',
     'jsx!components/bookprofile/bookextras',
     'jsx!components/bookprofile/bookrecommend'
-], function($, _,React,Backbone, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
+], function(_,React, BookInfoComponent, BookExtrasComponent, BookRecommendComponent) {
     return React.createClass({
         getInitialState: function() {
             return {
