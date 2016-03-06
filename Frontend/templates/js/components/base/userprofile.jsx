@@ -1,11 +1,18 @@
 define([
     'underscore',
     'react',
-], function(_, React) {
+    'jsx!components/widgets/bookCarousel'
+], function(_, React,BookCarousel) {
     return React.createClass({
         getInitialState : function() {
+             var book = {
+                title: null,
+                description: null,
+                author: null
+            }
+            books = [book, book, book, book]
             return {
-
+                books: books
             }
         },
         componentDidMount : function() {
@@ -51,7 +58,7 @@ define([
                      <ul className="collapsible" data-collapsible="accordion">
                         <li>
                           <div className="collapsible-header"><i className="material-icons">lock</i>Books you have borrowed </div>
-                          <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                          <div className="collapsible-body"><BookCarousel books={this.state.books}/></div>
                         </li>
                         <li>
                           <div className="collapsible-header"><i className="material-icons">rate_review</i>Books you have reviewed</div>
