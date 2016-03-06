@@ -29,8 +29,8 @@ define([
                         <div className="col s12 m6 row profile">
 
                             <div className="col s8 greeting">
+                            <h3>firstName lastName</h3>
                             <img className="activator" src = {imageURL}/>
-                                <h4>firstName lastName</h4>
                                 <div className="button-rating">
                                     <span className="amber-text text-lighten-2 rating">
                                          <i className="material-icons">star</i>
@@ -62,11 +62,11 @@ define([
                         </li>
                         <li>
                           <div className="collapsible-header"><i className="material-icons">rate_review</i>Books you have reviewed</div>
-                          <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                          <div className="collapsible-body"><BookCarousel books={this.state.books}/></div>
                         </li>
                         <li>
                           <div className="collapsible-header"><i className="material-icons">library_books</i>Books you are currently enjoying</div>
-                          <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                          <div className="collapsible-body"><BookCarousel books={this.state.books}/></div>
                         </li>
                     </ul>
 
