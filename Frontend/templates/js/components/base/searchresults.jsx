@@ -33,13 +33,13 @@ define([
                     <div className="row searchBanner valign-wrapper"></div>
                     <div className="row tab-row searchTabs z-depth-1">
                         <div className="col s12">
-                            <div className="tab col s4 dropdown-button" href='#' data-activates='genreDropdown'>
+                            <div className="tab col s4 dropdown-button" href='#' data-activates='genreDropdown' data-beloworigin="true">
                                 <p className="center-align">Genre</p>
                             </div>
-                            <div className="tab col s4 dropdown-button" href='#' data-activates='titleDropdown'>
+                            <div className="tab col s4 dropdown-button" href='#' data-activates='titleDropdown' data-beloworigin="true">
                                 <p className="center-align">Title</p>
                             </div>
-                            <div className="tab col s4 dropdown-button" href='#' data-activates='authorDropdown'>
+                            <div className="tab col s4 dropdown-button" href='#' data-activates='authorDropdown' data-beloworigin="true">
                                 <p className="center-align">Author</p>
                             </div>
                         </div>
