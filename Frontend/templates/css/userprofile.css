@@ -1,12 +1,16 @@
 html, body {
   font-family: Robotto, sans-serif;
+  height: 100%;
+  width: 100%;
   z-index: 0; }
 
 .padNav {
-  margin-top: 72px; }
+  padding-top: 64px; }
+
+.waves-effect {
+  position: static; }
 
 .nav-wrapper-outer {
-  z-index: 9;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -15,11 +19,13 @@ html, body {
     margin-left: 10px; }
   @media screen and (max-width: 992px) {
     .nav-wrapper-outer {
-      position: relative; } }
+      position: absolute; } }
   .nav-wrapper-outer .nav-wrapper .nav-search {
     width: 65%;
     margin-left: 13%;
     border-radius: 3px; }
+    .nav-wrapper-outer .nav-wrapper .nav-search #search {
+      width: calc(100% - 5rem); }
     @media screen and (max-width: 992px) {
       .nav-wrapper-outer .nav-wrapper .nav-search {
         width: 80%;
@@ -80,4 +86,37 @@ html, body {
   background-color: #000000;
   opacity: 0; }
 
-/*# sourceMappingURL=user_profile.css.map */
+.bookCarousel {
+  width: 100%;
+  margin-right: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto; }
+
+.book {
+  background-color: white;
+  margin: 10px 15px;
+  max-width: 250px;
+  position: relative;
+  text-align: left; }
+  .book .cover {
+    width: 100%;
+    height: auto; }
+  .book .title {
+    position: absolute;
+    font-size: 20px;
+    top: 210px;
+    color: white;
+    text-shadow: 1px 1px 6px #000000; }
+  .book .details {
+    padding: 7px; }
+    .book .details p {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .book .details .actions {
+      margin-top: 5px;
+      padding: 5px 0;
+      border-top: 1px rgba(0, 0, 0, 0.2) solid; }
+
+/*# sourceMappingURL=userprofile.css.map */
