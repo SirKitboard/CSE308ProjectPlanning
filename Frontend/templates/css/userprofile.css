@@ -161,7 +161,8 @@ html, body {
     padding: 7px; }
     .book .details p {
       margin-top: 5px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      padding: 0px; }
     .book .details .actions {
       margin-top: 5px;
       padding: 5px 0;
