@@ -1,8 +1,7 @@
 define([
     'underscore',
     'react',
-    'materialize'
-], function(_, React, Materialize) {
+], function(_, React) {
     return React.createClass({
         getInitialState : function() {
             return {
