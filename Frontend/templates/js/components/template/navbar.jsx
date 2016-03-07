@@ -45,7 +45,7 @@ define([
             $("#searchDetails").css('display', 'block')
         },
         hideDetails : function() {
-            $("#searchDetails").css('display', 'none')
+            // $("#searchDetails").css('display', 'none')
         },
         toggleCart : function() {
             if(this.state.cartOpen) {
@@ -77,7 +77,7 @@ define([
             var searchDetails = (
                 <div id="searchDetails" className="searchDetails container">
                     <div className="row">
-                        <div className="col s12 m6 input-field">
+                        <div className="col s12 m6 genre-filters input-field">
                             <p>
                               <input type="checkbox" id="genre_fiction" />
                               <label htmlFor="genre_fiction">Fiction</label>
@@ -94,13 +94,21 @@ define([
                               <input type="checkbox" id="genre_biography"/>
                               <label htmlFor="genre_biography">Biography</label>
                             </p>
-                              <p>
-                                <input type="checkbox" id="genre_sci-fi"/>
-                                <label htmlFor="genre_sci-fi">Science Fiction</label>
+                            <p>
+                              <input type="checkbox" id="genre_sci-fi"/>
+                              <label htmlFor="genre_sci-fi">Science Fiction</label>
+                            </p>
+                            <p>
+                              <input type="checkbox" id="genre_sci-fi"/>
+                              <label htmlFor="genre_sci-fi">Mystery</label>
+                            </p>
+                            <p>
+                              <input type="checkbox" id="genre_sci-fi"/>
+                              <label htmlFor="genre_sci-fi">Romance</label>
                             </p>
 
                         </div>
-                        <div className="col s12 m6">
+                        <div className="col s12 m6 search-filters">
                             <div className="row">
                                 <div className="input-field col s12">
                                     <input ref="Author" id="Author" type="text" className="validate"/>
@@ -115,6 +123,12 @@ define([
                                 <div className="input-field col s12 m6">
                                     <input ref="toyear" id="toyear" type="text" className="validate"/>
                                     <label htmlhtmlFor="toyear">To Year</label>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <input ref="rating" id="rating" type="number" min="0" max="5" className="validate"/>
+                                    <label htmlhtmlFor="rating">Rating</label>
                                 </div>
                             </div>
                         </div>
@@ -157,11 +171,11 @@ define([
                                 <label htmlthtmlFor="search"><i className="grey-text material-icons">search</i></label>
                                 <i className="grey-text material-icons">close</i>
                             </div>
-                            {searchDetails}
                         </form>
                         {mobileItems}
                     </div>
                     </nav>
+                    {searchDetails}
                 </div>
             )
         }
