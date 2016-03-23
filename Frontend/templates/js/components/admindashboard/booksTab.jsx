@@ -21,7 +21,9 @@ define([
         },
         render: function() {
             return (
+
                 <div id="booksTab" className="row">
+                 <a className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">add</i></a>
                     <div className="col s12 m3 bookList">
                         <div className="input-field">
                           <i className="material-icons prefix">search</i>
@@ -42,6 +44,7 @@ define([
                     </div>
                     <div className="col s12 m9 BookDetails">
                         <BookInfo book={this.state.books[0]}/>
+
                     </div>
                 </div>
             )
