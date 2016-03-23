@@ -23,13 +23,28 @@ define([
 
         componentDidMount: function() {
             $('.dropdown-button').dropdown();
+            $(window).scroll(function(e){
+                // console.log('hi');
+              var $el = $('.fixedElement');
+              console.log($(this).scrollTop());
+              var isPositionFixed = ($el.css('position') == 'fixed');
+              if ($(this).scrollTop() > 400 && !isPositionFixed){
+                $('.fixedElement').css({'position': 'fixed', 'top': '64px'});
+                console.log('fix!');
+              }
+              if ($(this).scrollTop() < 400 && isPositionFixed)
+              {
+                $('.fixedElement').css({'position': 'absolute', 'top': '464px'});
+                console.log('unfix!');
+              }
+            });
         },
 
         render: function() {
             return(
                 <div>
                     <div className="row searchBanner valign-wrapper"></div>
-                    <div className="row tab-row searchTabs z-depth-1">
+                    <div style={{background:'white', top:'464px'}}className="row tab-row searchTabs z-depth-1 fixedElement">
                         <div className="col s12">
                             <div className="tab col s4 dropdown-button" href='#' data-activates='genreDropdown' data-beloworigin="true">
                                 <p className="center-align">Genre</p>
@@ -42,7 +57,7 @@ define([
                             </div>
                         </div>
                     </div>
-                    <div className="row searchResults">
+                    <div style={{paddingTop:'52px'}}className="row searchResults">
                         <SearchResults books={this.state.results}/>
                     </div>
                     <div className="row">
@@ -56,20 +71,27 @@ define([
                     <ul id="genreDropdown" className='dropdown-content'>
                        <li><a href="#!">one</a></li>
                        <li><a href="#!">two</a></li>
-                       <li className="divider"></li>
                        <li><a href="#!">three</a></li>
                      </ul>
 
                      <ul id="titleDropdown" className="dropdown-content">
-                         <form>
-                             <input type="text" />
-                         </form>
+                         <li>
+                             <form>
+                                 <input type="text" />
+                             </form>
+                         </li>
+                         <li><a href="#!">one</a></li>
+                         <li><a href="#!">two</a></li>
                      </ul>
 
                      <ul id="authorDropdown" className="dropdown-content">
-                         <form>
-                             <input type="text" />
-                         </form>
+                         <li>
+                             <form>
+                                 <input type="text" />
+                             </form>
+                         </li>
+                         <li><a href="#!">one</a></li>
+                         <li><a href="#!">two</a></li>
                      </ul>
                 </div>
             )

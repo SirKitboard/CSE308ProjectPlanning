@@ -15,7 +15,7 @@ define([
 						<p className="author">{this.props.book.author ? this.props.book.author : "Author"}</p>
 						<p className="author">{this.props.book.author ? this.props.book.author : "Rating"}</p>
 						<div className="actions">
-							<span className="action"><a>View</a></span>
+							<span className="action"><a href="bookprofile.html">View</a></span>
 						</div>
 					</div>
 				</div>
