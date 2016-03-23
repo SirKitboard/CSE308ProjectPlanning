@@ -19,6 +19,7 @@ define([
             $('.collapsible').collapsible({
               accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
             });
+            $(".modal-trigger").leanModal();
         },
         render: function() {
         var profileInfo = "";
@@ -69,9 +70,32 @@ define([
                           <div className="collapsible-body"><BookCarousel books={this.state.books}/></div>
                         </li>
                     </ul>
-
+                    <div className="fixed-action-btn">
+                       <a className="btn-floating btn-large red modal-trigger" href="#confirmationModal">
+                         <i className="large material-icons">not_interested</i>
+                       </a>
+                     </div>
+                     <div id="confirmationModal" className="modal">
+                         <div className="modal-content container">
+                            <div className="col s12">
+                                Are you sure you want to deactivate your account?
+                            </div>
+                            <div className="input-field col s12">
+                                <input id="password" type="password" className="validate" data-error="Invalid username or password"/>
+                                <label htmlFor="password">Password</label>
+                            </div>
+                             <div className="col s12 buttons" style={{display: 'flex','justify-content': 'space-around', marginBottom: '10px'}}>
+                                 <button className="btn waves-effect waves-light" id='login' type="submit" name="action">Submit
+                                   <i className="material-icons right">send</i>
+                                 </button>
+                                 <button className="btn waves-effect waves-light modal-action modal-close">Close
+                                   <i className="material-icons right">clear</i>
+                                 </button>
+                             </div>
+                         </div>
+                     </div>
                 </div>
-);
+            );
         }
     });
 })
