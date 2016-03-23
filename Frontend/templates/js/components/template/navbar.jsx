@@ -20,7 +20,8 @@ define([
             return {
                 'loggedIn': loggedIn,
                 'books': books,
-                cartOpen: false
+                cartOpen: false,
+                showSearchDetails: false
             }
         },
         componentDidMount : function() {
@@ -42,9 +43,14 @@ define([
             }
         },
         showDetails : function() {
-            $("#searchDetails").css('display', 'block')
+            this.setState({
+                showSearchDetails : true
+            });
         },
         hideDetails : function() {
+            this.setState({
+                showSearchDetails : false
+            });
             // $("#searchDetails").css('display', 'none')
         },
         toggleCart : function() {
@@ -73,68 +79,76 @@ define([
                 })
             }
         },
+        submitSearch : function(e) {
+            if(e.keyCode == 13) {
+                window.location.href = "searchresults.html";
+            }
+        },
         render: function() {
-            var searchDetails = (
-                <div id="searchDetails" className="searchDetails container">
-                    <div className="row">
-                        <div className="col s12 m6 genre-filters input-field">
-                            <p>
-                              <input type="checkbox" id="genre_fiction" />
-                              <label htmlFor="genre_fiction">Fiction</label>
-                            </p>
-                            <p>
-                              <input type="checkbox" id="genre_youngadult"/>
-                              <label htmlFor="genre_youngadult">Young Adult</label>
-                            </p>
-                            <p>
-                              <input type="checkbox" id="genre_mature"/>
-                              <label htmlFor="genre_mature">Mature</label>
-                            </p>
-                            <p>
-                              <input type="checkbox" id="genre_biography"/>
-                              <label htmlFor="genre_biography">Biography</label>
-                            </p>
-                            <p>
-                              <input type="checkbox" id="genre_sci-fi"/>
-                              <label htmlFor="genre_sci-fi">Science Fiction</label>
-                            </p>
-                            <p>
-                              <input type="checkbox" id="genre_sci-fi"/>
-                              <label htmlFor="genre_sci-fi">Mystery</label>
-                            </p>
-                            <p>
-                              <input type="checkbox" id="genre_sci-fi"/>
-                              <label htmlFor="genre_sci-fi">Romance</label>
-                            </p>
+            var searchDetails = "";
+            if(this.state.showSearchDetails) {
+                var searchDetails = (
+                    <div id="searchDetails" className="searchDetails container">
+                        <div className="row">
+                            <div className="col s12 m6 genre-filters input-field">
+                                <p>
+                                  <input type="checkbox" id="genre_fiction" />
+                                  <label htmlFor="genre_fiction">Fiction</label>
+                                </p>
+                                <p>
+                                  <input type="checkbox" id="genre_youngadult"/>
+                                  <label htmlFor="genre_youngadult">Young Adult</label>
+                                </p>
+                                <p>
+                                  <input type="checkbox" id="genre_mature"/>
+                                  <label htmlFor="genre_mature">Mature</label>
+                                </p>
+                                <p>
+                                  <input type="checkbox" id="genre_biography"/>
+                                  <label htmlFor="genre_biography">Biography</label>
+                                </p>
+                                <p>
+                                  <input type="checkbox" id="genre_sci-fi"/>
+                                  <label htmlFor="genre_sci-fi">Science Fiction</label>
+                                </p>
+                                <p>
+                                  <input type="checkbox" id="genre_sci-fi"/>
+                                  <label htmlFor="genre_sci-fi">Mystery</label>
+                                </p>
+                                <p>
+                                  <input type="checkbox" id="genre_sci-fi"/>
+                                  <label htmlFor="genre_sci-fi">Romance</label>
+                                </p>
 
-                        </div>
-                        <div className="col s12 m6 search-filters">
-                            <div className="row">
-                                <div className="input-field col s12">
-                                    <input ref="Author" id="Author" type="text" className="validate"/>
-                                    <label htmlhtmlFor="Author">Author</label>
-                                </div>
                             </div>
-                            <div className="row">
-                                <div className="input-field col s12 m6">
-                                    <input ref="fromyear" id="fromyear" type="text" className="validate"/>
-                                    <label htmlhtmlFor="fromyear">From Year</label>
+                            <div className="col s12 m6 search-filters">
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <input ref="Author" id="Author" type="text" className="validate"/>
+                                        <label htmlhtmlFor="Author">Author</label>
+                                    </div>
                                 </div>
-                                <div className="input-field col s12 m6">
-                                    <input ref="toyear" id="toyear" type="text" className="validate"/>
-                                    <label htmlhtmlFor="toyear">To Year</label>
+                                <div className="row">
+                                    <div className="input-field col s12 m6">
+                                        <input ref="fromyear" id="fromyear" type="text" className="validate"/>
+                                        <label htmlhtmlFor="fromyear">From Year</label>
+                                    </div>
+                                    <div className="input-field col s12 m6">
+                                        <input ref="toyear" id="toyear" type="text" className="validate"/>
+                                        <label htmlhtmlFor="toyear">To Year</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="input-field col s12">
-                                    <input ref="rating" id="rating" type="number" min="0" max="5" className="validate"/>
-                                    <label htmlhtmlFor="rating">Rating</label>
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <input ref="rating" id="rating" type="number" min="0" max="5" className="validate"/>
+                                        <label htmlhtmlFor="rating">Rating</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )
+                )
+            }
             if(this.state.loggedIn) {
                 var navItems = (<ul id="dropdown1" className="dropdown-content">
                       <li><a href="#!">Profile</a></li>
@@ -167,7 +181,7 @@ define([
                         </ul>
                         <form onFocus={this.showDetails} onBlur={this.hideDetails} className="nav-search">
                             <div className="input-field">
-                                <input id="search" type="search" placeholder="Search" required/>
+                                <input id="search" type="search" placeholder="Search" onKeyDown={this.submitSearch} required/>
                                 <label htmlthtmlFor="search"><i className="grey-text material-icons">search</i></label>
                                 <i className="grey-text material-icons">close</i>
                             </div>
