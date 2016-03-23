@@ -94,6 +94,46 @@ html, body {
   background-color: #000000;
   opacity: 0; }
 
+.fixedElement {
+  position: absolute;
+  width: 100%;
+  z-index: 100; }
+
+.login {
+  text-align: center; }
+  .login h2 {
+    font-family: "HammersmithOne", "Helvetica", sans-serif;
+    font-size: 36px;
+    margin-bottom: 0; }
+  .login .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px; }
+
+.signup {
+  margin-top: 30px;
+  padding: 50px; }
+  .signup .header {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 20px; }
+    .signup .header .material-icons {
+      vertical-align: text-bottom; }
+  .signup .contact {
+    color: #42A5F5; }
+  .signup .address {
+    color: #FFB74D; }
+  .signup .payment, .signup .employment {
+    color: #4CAF50; }
+  .signup .account {
+    color: #EF5350; }
+  .signup .row {
+    margin-bottom: 0; }
+    .signup .row .input-field {
+      padding-left: 0; }
+      .signup .row .input-field label {
+        left: 0; }
+
 .bookCarousel {
   width: 100%;
   margin-right: 10px;
