@@ -12,4 +12,4 @@
 | Channel to Actor              | Via web browser |
 | Secondary Actors              | Admin, server|
 | Channels to Secondary  Actors | Admin: web browser interface, program modification<br />server: network and local interface|
-| Open Issues                   | User repeatedly clicks on veiw cart while the request is being processed. |
+| Open Issues                   | User repeatedly clicks on view cart while the request is being processed. |
