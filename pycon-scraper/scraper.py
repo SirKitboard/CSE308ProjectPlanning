@@ -10,8 +10,8 @@ isbnsComplete = []
 
 baseURL = "https://openlibrary.org/api/books?bibkeys=%s&format=json&jscmd=data"
 
-start = 1000100000
-end   = 1000200000
+start =  999899999
+end   = 1000000000
 # end = 1000000100
 
 allISBNS = list(range(start, end))
@@ -37,13 +37,14 @@ def getBook(inputISBN):
         isbnsComplete.append(isbn)
 
     isbnURL = ','.join(urlString)
-    # print(isbnURL)
+    # print(baseURL % isbnURL)
     r = requests.get(baseURL % isbnURL);
     print("%.3f%% %d" % ((len(isbnsComplete) * 100 / (end - start)), r.status_code))
     jsonBook = r.json()
+    print(len(isbns))
     for isbn in inputISBN:
-        if(("ISBN:%d" % isbn) in jsonBook):
-            isbns.append(jsonBook["ISBN:%d" % isbn])
+        if(("ISBN:%010d" % isbn) in jsonBook):
+            isbns.append(jsonBook["ISBN:%010d" % isbn])
 
 results = pool.map(getBook, isbnsDict)
 
