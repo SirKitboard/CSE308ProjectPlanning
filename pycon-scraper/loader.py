@@ -28,7 +28,7 @@ try:
     connection = mysql.connector.connect(user='root',password='password',host='127.0.0.1',database='librarebook')
     crsr = connection.cursor(dictionary=True)
 
-    with open('booksJSON_1.json','r') as data:
+    with open('booksJSON_3.json','r') as data:
         bookArray = json.load(data)
 
         for book in bookArray:
@@ -50,7 +50,7 @@ try:
                     publisherID = publisher["id"]
                 else:
                     phone = generateNumber()
-                    email = "".join(name.lower().split(" ")) + "@gmail.com"
+                    email = "".join(name.lower().split(r'[@,.\s-]')) + "@gmail.com"
                     print(email,"\n")
                     crsr.execute(publisherAddQuery, tuple([name,email,phone]))
 
