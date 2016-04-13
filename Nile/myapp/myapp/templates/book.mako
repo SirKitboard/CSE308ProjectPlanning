@@ -2,9 +2,12 @@
 <%def name="title()">Add Item</%def>
 <%def name="head()">
 <link href="${request.static_url('myapp:static/css/book.css')}" rel="stylesheet">
+<script>
+	window.isbn = ${isbn};
+</script>
 </%def>
 <%def name="body()">
-    <div id="addItemContainer" class="container">
+    <div id="addItemContainer" style="width:100%" class="container">
     </div>
 </%def>
 <%def name="scripts()">

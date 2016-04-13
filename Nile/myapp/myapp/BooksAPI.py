@@ -41,6 +41,7 @@ def apiGetBook(request):
             book['authors'] = authors
             book['publisher'] = cursor.fetchone()
             book['date_added'] = str(book['date_added'])
+            book['price'] = str(book['price'])
 
         else:
             raise exc.HTTPNoContent()

@@ -14,8 +14,10 @@ def gotoBook(request):
 
 @view_config(route_name='book', renderer='myapp:templates/book.mako')
 def bookPage(request):
+	isbn = request.matchdict['isbn']
 	values = {
 		'currentUser': None,
+		'isbn': isbn
 	}
 	if('currentUser' in request.session):
 		values["currentUser"] = request.session['currentUser']
