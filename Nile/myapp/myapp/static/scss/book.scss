@@ -1,0 +1,83 @@
+.sidebar {
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    top:0;
+    left:0;
+    background: #222;
+    color:white;
+    text-align: center;
+    transition: 0.2s all ease-in;
+    box-shadow: 2px 0px 20px grey;
+    .website-name {
+        font-size: 12px;
+        transition: 0.2s all ease-in;
+    }
+    .divider {
+        width: 90%;
+        margin:auto;
+    }
+    .profileInfo {
+        img {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            transition: 0.2s all ease-in;
+        }
+        span {
+            opacity: 0;
+            transition: 0.2s all ease-in;
+        }
+    }
+    .navIcons {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            span {
+                font-size: 10px;
+                opacity: 0;
+            }
+            &:hover {
+                    opacity: 1 !important;
+                    transition: 0.2s all ease-in;
+                span {
+                    font-size: 20px;
+                    transition: 0.2s all ease-in;
+                }
+                i {
+                    font-size: 50px;
+                    transition: 0.2s all ease-in;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        width: 100px;
+        .website-name: {font-size: 15px};
+        .profileInfo {
+            img {
+                width: 90px;
+                height: 90px;
+                margin: auto;
+            }
+            span {
+                opacity: 1;
+            }
+        }
+
+        .navIcons {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 25px;
+
+            li {
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.idea
+bak
+/bin
+/include
+/lib
+/myapp/dist
+/myapp/build
+/myapp/myapp.egg-info
+vagrant
+__pycache__/
+.pyc
