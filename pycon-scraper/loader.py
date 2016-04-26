@@ -27,11 +27,27 @@ def generateNumber():
         i = i + 1
     return number
 
+def f5(seq, idfun=None):
+   # order preserving
+   if idfun is None:
+       def idfun(x): return x
+   seen = {}
+   result = []
+   for item in seq:
+       marker = idfun(item)
+       # in old Python versions:
+       # if seen.has_key(marker)
+       # but in new ones:
+       if marker in seen: continue
+       seen[marker] = 1
+       result.append(item)
+   return result
+
 try:
     connection = mysql.connector.connect(user='root',password='password',host='127.0.0.1',database='librarebook')
     crsr = connection.cursor(dictionary=True)
 
-    with open('booksJSON_3.json','r') as data:
+    with open('booksJSON.json','r') as data:
         bookArray = json.load(data)
 
         for book in bookArray:
@@ -110,8 +126,10 @@ try:
                 itemID = crsr.lastrowid
                 if itemID != -1:
                     crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
+                authorIds = f5(authorIds)
                 for authorId in authorIds:
                     crsr.execute(itemAuthorAddQuery, tuple([str(itemID), str(authorId)]))
+
 
     crsr.close()
     connection.commit()
