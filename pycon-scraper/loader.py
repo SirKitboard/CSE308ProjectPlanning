@@ -47,15 +47,15 @@ try:
 
             if "publishers" in book:
                 name = book["publishers"][0]['name']
-                # crsr.execute(publisherSelectQuery, tuple([name]))
-                # publisher = crsr.fetchone()
-                # if publisher:
-                #     publisherID = publisher["id"]
-                # else:
-                #     phone = generateNumber()
-                #     email = "".join(name.lower().split(r'[@,.\s-]')) + "@gmail.com"
-                    # print(email,"\n")
-                    # crsr.execute(publisherAddQuery, tuple([name,email,phone]))
+                crsr.execute(publisherSelectQuery, tuple([name]))
+                publisher = crsr.fetchone()
+                if publisher:
+                    publisherID = publisher["id"]
+                else:
+                    phone = generateNumber()
+                    email = "".join(name.lower().split(r'[@,.\s-]')) + "@gmail.com"
+                    print(email,"\n")
+                    crsr.execute(publisherAddQuery, tuple([name,email,phone]))
 
             if "authors" in book:
                 authors = book["authors"]
@@ -68,11 +68,11 @@ try:
                         lastName = ""
                     crsr.execute(authorSelectQuery,tuple([firstName,lastName]))
                     existingAuthor = crsr.fetchone()
-                    # if existingAuthor:
-                    #     authorIds.append(existingAuthor["id"])
-                    # else:
-                    #     crsr.execute(authorAddQuery, tuple([firstName, lastName]))
-                    #     authorIds.append(crsr.lastrowid)
+                    if existingAuthor:
+                        authorIds.append(existingAuthor["id"])
+                    else:
+                        crsr.execute(authorAddQuery, tuple([firstName, lastName]))
+                        authorIds.append(crsr.lastrowid)
 
             if "details" in book:
                 if "number_of_pages" in book["details"]:
@@ -106,13 +106,13 @@ try:
 
 
             crsr.execute(updateBookQuery,tuple([isbn,coverImg,title]))
-            # if len(authorIds) > 0:
-                # # crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
-                # itemID = crsr.lastrowid
-                # if itemID != -1:
-                #     crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
-                # for authorId in authorIds:
-                #     crsr.execute(itemAuthorAddQuery, tuple([str(itemID), str(authorId)]))
+            if len(authorIds) > 0:
+                # crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
+                itemID = crsr.lastrowid
+                if itemID != -1:
+                    crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
+                for authorId in authorIds:
+                    crsr.execute(itemAuthorAddQuery, tuple([str(itemID), str(authorId)]))
 
     crsr.close()
     connection.commit()
