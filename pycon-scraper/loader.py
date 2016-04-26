@@ -47,7 +47,7 @@ try:
     connection = mysql.connector.connect(user='root',password='password',host='127.0.0.1',database='librarebook')
     crsr = connection.cursor(dictionary=True)
 
-    with open('booksJSON.json','r') as data:
+    with open('booksJSON_5.json','r') as data:
         bookArray = json.load(data)
 
         for book in bookArray:
@@ -127,6 +127,7 @@ try:
                 if itemID != -1:
                     crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
                 authorIds = f5(authorIds)
+                print(authorIds)
                 for authorId in authorIds:
                     crsr.execute(itemAuthorAddQuery, tuple([str(itemID), str(authorId)]))
 
