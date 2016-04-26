@@ -37,7 +37,7 @@ try:
             authorIds = []
             itemID = -1
             description = ""
-            language = "English"
+            language = "ENGLISH"
             totalLicenses = randint(1,50)
             numPages = randint(30,400)
             title = ""
