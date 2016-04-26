@@ -104,10 +104,8 @@ try:
                 if "isbn_13" in book["identifiers"]:
                     isbn = str(book["identifiers"]["isbn_13"][0])
 
-
-            crsr.execute(updateBookQuery,tuple([isbn,coverImg,title]))
             if len(authorIds) > 0:
-                # crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
+                crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
                 itemID = crsr.lastrowid
                 if itemID != -1:
                     crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
