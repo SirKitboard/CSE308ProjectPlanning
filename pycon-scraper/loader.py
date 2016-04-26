@@ -1,4 +1,5 @@
 import json
+import re
 import mysql.connector
 from random import randint
 
@@ -9,6 +10,7 @@ lastItemQuery = "SELECT id from items ORDER BY id DESC LIMIT 1;"
 itemAddQuery = "INSERT INTO items (item_type, cover_image_url, language, status, title,total_licenses,year_published,publisher,date_added,isbn)\
                     VALUES ('book', %s, %s, 'Available',%s, %s, %s, %s,NOW(),%s);"
 itemSelectQuery = "SELECT * from items;"
+titleSelectQuery = "SELECT * FROM items WHERE title=%s;"
 publisherSelectQuery = "SELECT * from publishers where name = %s LIMIT 1;"
 publisherAddQuery = "INSERT INTO publishers (name, email, phone_number) VALUES (%s, %s, %s);"
 authorSelectQuery = "SELECT * FROM authors where first_name = %s AND last_name = %s;"
@@ -53,8 +55,7 @@ try:
                     publisherID = publisher["id"]
                 else:
                     phone = generateNumber()
-                    email = "".join(name.lower().split(r'[@,.\s-]')) + "@gmail.com"
-                    print(email,"\n")
+                    email = "".join(re.split(r"[&@,.\s-]",name.lower())) + "@gmail.com"
                     crsr.execute(publisherAddQuery, tuple([name,email,phone]))
 
             if "authors" in book:
@@ -66,7 +67,7 @@ try:
                         lastName = split[-1]
                     else:
                         lastName = ""
-                    crsr.execute(authorSelectQuery,tuple([firstName,lastName]))
+                    crsr.execute(authorSelectQuery,tuple([firstName.title(),lastName.title()]))
                     existingAuthor = crsr.fetchone()
                     if existingAuthor:
                         authorIds.append(existingAuthor["id"])
