@@ -47,7 +47,7 @@ try:
     connection = mysql.connector.connect(user='root',password='password',host='127.0.0.1',database='librarebook')
     crsr = connection.cursor(dictionary=True)
 
-    with open('booksJSON_5.json','r') as data:
+    with open('booksJSON.json','r') as data:
         bookArray = json.load(data)
 
         for book in bookArray:
@@ -122,10 +122,11 @@ try:
                     isbn = str(book["identifiers"]["isbn_13"][0])
 
             if len(authorIds) > 0:
-                crsr.execute(titleSelectQuery, (title))
+                crsr.execute(titleSelectQuery, (title,))
                 existingBook = crsr.fetchone()
                 if not existingBook:
-                    crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
+                    print([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), isbn])
+                    crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), isbn]))
                     itemID = crsr.lastrowid
                     if itemID != -1:
                         crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
