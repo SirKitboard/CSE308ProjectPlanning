@@ -122,16 +122,17 @@ try:
                     isbn = str(book["identifiers"]["isbn_13"][0])
 
             if len(authorIds) > 0:
-                crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
-                itemID = crsr.lastrowid
-                if itemID != -1:
-                    crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
-                authorIds = f5(authorIds)
-                print(authorIds)
-                for authorId in authorIds:
-                    crsr.execute(itemAuthorAddQuery, tuple([str(itemID), str(authorId)]))
-
-
+                crsr.execute(titleSelectQuery, (title))
+                existingBook = crsr.fetchone()
+                if not existingBook:
+                    crsr.execute(itemAddQuery,tuple([coverImg, language,title,str(totalLicenses),str(publishYear),str(publisherID), str(isbn)]))
+                    itemID = crsr.lastrowid
+                    if itemID != -1:
+                        crsr.execute(bookAddQuery,tuple([str(numPages),str(itemID)]))
+                    authorIds = f5(authorIds)
+                    for authorId in authorIds:
+                        crsr.execute(itemAuthorAddQuery, tuple([str(itemID), str(authorId)]))
+                        
     crsr.close()
     connection.commit()
     connection.close()
